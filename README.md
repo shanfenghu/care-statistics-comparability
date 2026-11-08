@@ -26,19 +26,20 @@ scope, order accounting, numerical optimisation and input-boundary checks.
 checked population obstructions. State indices and witness multiplicities must
 be integers; Boolean and fractional values are rejected.
 
-## Exact inputs
+## Provider inputs
 
-Read `data/README.md` before acquisition. Five exact CSVs total 17,071,519 bytes;
-their SHA-256 values and source URLs are in `data/comparison-input-manifest.json`.
-They are supplied separately from Git. Given the retained versioned input archive:
+Read `data/README.md` for the five original DHSC/DfE download links, studied
+versions, selections, access conditions and preprocessing. Download directly:
 
 ```sh
-.venv/bin/python experiments/comparison/acquire.py --archive /path/to/aggregate-input-snapshot-1.0.2.tar.gz
+.venv/bin/python experiments/comparison/acquire.py --download
+.venv/bin/python experiments/comparison/acquire.py --verify
 ```
 
-Alternatively use `--from-dir /path/to/retained-inputs` with the manifest-relative
-paths, or explicitly request `--download`. A changed publisher download fails
-verification; it never becomes a replacement benchmark version.
+The five CSVs total 17,071,519 bytes. No raw or prepared provider input data is
+bundled in Git or project release assets. Manual provider downloads and existing
+provider copies are supported as described in the data README. A revised or
+unavailable provider version is reported rather than silently substituted.
 
 ## Reproduction
 
@@ -57,7 +58,7 @@ It forces one numerical thread and retains warnings in `records/*.log`.
 Existing comparison result directories, plots, tables or nonempty records are
 refused before any stage starts: use a fresh checkout for another run.
 The ranking grids involve 900 original and 1,080 additional inner fits; full
-reproduction took 43 seconds on the tested host and uses a few hundred MB beyond
+reproduction took about 45 seconds on the tested host and uses a few hundred MB beyond
 the environment. Actual runtime and platform are recorded in `records/reproduction.json`.
 
 `results/` holds detailed regenerated cases and summaries, `figures/` the five

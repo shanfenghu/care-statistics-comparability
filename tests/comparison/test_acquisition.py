@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+import acquire
 from acquire import check, safe
 from check_results import compare
 from export_tables import count
@@ -28,6 +29,37 @@ class InputBoundaryTests(unittest.TestCase):
         check(b'abc',item)
         for data in [b'xyz',b'abcd']:
             with self.assertRaises(ValueError):check(data,item)
+
+    def test_provider_download_validates_all_inputs_before_writing(self):
+        import hashlib
+        import io
+        import json
+        payloads = [b'abc', b'def']
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            items = [dict(path='data/raw/' + str(i) + '.csv', bytes=len(data),
+                          sha256=hashlib.sha256(data).hexdigest(),
+                          url='https://example.invalid/' + str(i))
+                     for i, data in enumerate(payloads)]
+            manifest = root / 'manifest.json'
+            manifest.write_text(json.dumps(dict(files=items)))
+            for valid in (False, True):
+                responses = [io.BytesIO(payloads[0]),
+                             io.BytesIO(payloads[1] if valid else b'bad')]
+                with patch.object(acquire, 'ROOT', root), \
+                        patch.object(acquire, 'MANIFEST', manifest), \
+                        patch('sys.argv', ['acquire', '--download']), \
+                        patch.object(acquire.urllib.request, 'urlopen', side_effect=responses) as http:
+                    if valid:
+                        acquire.main()
+                    else:
+                        with self.assertRaisesRegex(ValueError, 'Input version differs'):
+                            acquire.main()
+                        self.assertFalse((root / 'data').exists())
+                    self.assertEqual([c.args[0] for c in http.call_args_list],
+                                     [item['url'] for item in items])
+            for item, data in zip(items, payloads):
+                self.assertEqual((root / item['path']).read_bytes(), data)
 
     def test_result_counts_are_exact_and_floats_have_declared_tolerance(self):
         self.assertEqual(compare({'count':3,'rate':.1},{'count':3,'rate':.1+1e-12}),2)

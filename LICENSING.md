@@ -1,6 +1,6 @@
 # Licence scope
 
-The component licences below apply to version 2.0.1. They do not
+The component licences below apply to this distribution. They do not
 claim publisher endorsement or grant rights in material the contributors do not
 own. These licences govern only this inventory and the described generated outputs.
 
@@ -12,9 +12,9 @@ own. These licences govern only this inventory and the described generated outpu
   and retain the source attribution below. See LICENSES/CC-BY-4.0.txt. Native source
   information in these outputs retains the applicable publisher terms; OGL v3.0
   permits covered adaptations complying with CC BY 4.0.
-- Government input CSVs supplied separately, and covered publisher information
+- Government input CSVs downloaded from the original providers, and covered publisher information
   in data/comparison-input-manifest.json: OGL v3.0, not MIT. See LICENSES/OGL-UK-3.0.txt and
-  THIRD-PARTY.txt. The five original CSVs remain byte for byte unchanged.
+  THIRD-PARTY.txt. Provider CSVs and prepared input copies are not distributed in this repository or its release assets.
 - Licence texts and separately installed dependencies retain their own terms.
   No dependency source, binary or environment is bundled here.
 
