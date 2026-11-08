@@ -1,0 +1,22 @@
+{
+  "adult_factor_mape": 8.78055558713073,
+  "adult_factor_point_error": 0.042915678240241534,
+  "adult_factor_answer_coverage": 0.5948740038768038,
+  "adult_factor_wrong": 0,
+  "adult_factor_answered": 2762,
+  "adult_forest_mape": 7.788969789091177,
+  "adult_forest_point_error": 0.044583243592504845,
+  "adult_forest_answer_coverage": 0.6037045013999569,
+  "adult_forest_wrong": 0,
+  "adult_forest_answered": 2803,
+  "child_factor_mape": 2.592471161039641,
+  "child_factor_point_error": 0.011732081911262798,
+  "child_factor_answer_coverage": 0.7329351535836177,
+  "child_factor_wrong": 1,
+  "child_factor_answered": 3436,
+  "child_forest_mape": 2.1549723032828316,
+  "child_forest_point_error": 0.011092150170648464,
+  "child_forest_answer_coverage": 0.7359215017064846,
+  "child_forest_wrong": 0,
+  "child_forest_answered": 3450
+}

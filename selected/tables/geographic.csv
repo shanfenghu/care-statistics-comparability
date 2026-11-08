@@ -1,0 +1,13 @@
+Source,Method,MAPE_percent,WAPE_percent,Point_error_percent,Guarded_answers_percent,Wrong,Answered
+Adult,Literal,39.39,44.84,4.29,34.16,0,1586
+Adult,Factor,8.78,8.31,4.29,59.49,0,2762
+Adult,Isotonic,17.90,9.56,3.54,51.11,0,2373
+Adult,Ridge,8.30,8.54,4.82,58.80,2,2730
+Adult,Forest,7.79,8.05,4.46,60.37,0,2803
+Adult,Pairwise rank,,,4.76,,,
+Child,Literal,9.26,10.04,1.17,58.83,0,2758
+Child,Factor,2.59,2.94,1.17,73.29,1,3436
+Child,Isotonic,35.22,3.81,0.97,50.77,1,2380
+Child,Ridge,2.33,2.63,1.17,71.31,0,3343
+Child,Forest,2.15,2.54,1.11,73.59,0,3450
+Child,Pairwise rank,,,1.09,,,

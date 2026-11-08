@@ -1,0 +1,5 @@
+Source,Converter,Family_wrong,Family_answered,Bonferroni_wrong,Bonferroni_answered
+Adult geographic,Factor,1,2892,0,464
+Adult geographic,Forest,0,2966,0,427
+Child geographic,Factor,1,3744,0,613
+Child geographic,Forest,0,3739,0,632

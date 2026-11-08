@@ -26,6 +26,24 @@ scope, order accounting, numerical optimisation and input-boundary checks.
 checked population obstructions. State indices and witness multiplicities must
 be integers; Boolean and fractional values are rejected.
 
+## Selected figures, tables and results
+
+The actual selected outputs are included under [selected/](selected/README.md):
+five figures in both PDF and PNG, six readable CSV tables, named numerical metrics
+and six scientific summary groups. See [figures](selected/figures/),
+[tables](selected/tables/) and [results](selected/results/). The numerical reference
+payload in `experiments/comparison/config/expected.json` is also retained.
+These findings/displays are distinct from provider input datasets.
+
+To regenerate the displays without inputs or refitting, use a new directory:
+
+```sh
+PYTHONPATH=src:experiments/comparison .venv/bin/python experiments/comparison/render_selected.py --output-dir /path/to/new-render
+```
+
+The selected snapshot stays intact. Full fitting below writes separate root working
+outputs, so a fresh checkout can still run the complete analysis.
+
 ## Provider inputs
 
 Read `data/README.md` for the five original DHSC/DfE download links, studied
@@ -66,7 +84,8 @@ plots, and `tables/` plain CSV comparisons and named metrics. Counts and labels
 must match exactly; floating results use relative tolerance 1e-8 and absolute
 1e-10. The compact expected payloads are fixed-data references, not held-out
 confirmation. Dense predictions, raw inputs, environments and caches stay out of
-Git; all are regenerated locally. No external service is used after acquisition.
+Git. The selected scientific displays and summaries remain tracked under
+`selected/`; dense working outputs are regenerated locally. No external service is used after acquisition.
 
 Better count fit need not improve comparisons. Repairs can create new errors;
 temporal preferences change by year. Specified-family calibration gives up joint

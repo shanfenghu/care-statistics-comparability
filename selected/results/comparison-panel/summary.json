@@ -1,0 +1,4816 @@
+{
+  "config_sha256": "e94358677a379ff534a7b5ada9f98fa469c5dbe0135cf98c3ff36f27fd947923",
+  "script_sha256": "2e59a619522bb4d8e2b442b6453745c00b7bc017ad6d1e6eba9ef07bcb549c00",
+  "raw_inputs": [
+    {
+      "path": "data/raw/dhsc/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "sha256": "bb885cdd3d19c4835653d964af8609e6cb37ab8da84b4bf643f74520efe5eec6"
+    },
+    {
+      "path": "data/raw/dfe/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32.csv",
+      "sha256": "e32eb63f8e702084c89e2fc9dbdcd626d1f738817a8656fb04a47bf03d9bbfdc"
+    },
+    {
+      "path": "data/raw/dfe/911dae20-ac5d-4e28-bee8-53a658761fa5.csv",
+      "sha256": "e634961fa6175393c7962aa3bb334cefb8713f5ecb490f6ce219d6a005973ea8"
+    }
+  ],
+  "environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "sklearn": "1.6.1"
+  },
+  "inventory": {
+    "counts": [
+      {
+        "source": "DHSC",
+        "year": 2025,
+        "status": "eligible",
+        "count": 152
+      },
+      {
+        "source": "DHSC",
+        "year": 2025,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2013,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2013,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2014,
+        "status": "eligible",
+        "count": 150
+      },
+      {
+        "source": "DfE",
+        "year": 2014,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 2
+      },
+      {
+        "source": "DfE",
+        "year": 2015,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2015,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2016,
+        "status": "eligible",
+        "count": 152
+      },
+      {
+        "source": "DfE",
+        "year": 2017,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2017,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2018,
+        "status": "eligible",
+        "count": 152
+      },
+      {
+        "source": "DfE",
+        "year": 2019,
+        "status": "eligible",
+        "count": 152
+      },
+      {
+        "source": "DfE",
+        "year": 2020,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2021,
+        "status": "eligible",
+        "count": 150
+      },
+      {
+        "source": "DfE",
+        "year": 2021,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2022,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2022,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 1
+      },
+      {
+        "source": "DfE",
+        "year": 2023,
+        "status": "eligible",
+        "count": 152
+      },
+      {
+        "source": "DfE",
+        "year": 2024,
+        "status": "eligible",
+        "count": 151
+      },
+      {
+        "source": "DfE",
+        "year": 2024,
+        "status": "missing_suppressed_unreliable_or_nonpositive",
+        "count": 2
+      },
+      {
+        "source": "DfE",
+        "year": 2025,
+        "status": "eligible",
+        "count": 153
+      }
+    ],
+    "event_below_person_authority_years": 0
+  },
+  "cases": [
+    {
+      "path": "results/comparison-panel/DHSC-geographic-0.json",
+      "sha256": "5050701fb14590b07a1c34b58c4f93975ce6c2f4629dde80c7e19c61dc5e8ad4"
+    },
+    {
+      "path": "results/comparison-panel/DHSC-geographic-1.json",
+      "sha256": "9d8d33ee7629464de2c492d56abb4ea6b04cbbbee21622d7131a8fd448d2af66"
+    },
+    {
+      "path": "results/comparison-panel/DHSC-geographic-2.json",
+      "sha256": "d1297669c061deb5d787870dbcf80c3bfcc32fa1c82fa6a2b586bc7c2e70241a"
+    },
+    {
+      "path": "results/comparison-panel/DHSC-geographic-3.json",
+      "sha256": "58a5091b583254452b7e980616c47f890f26c832b5ff3055e8302183717e37e5"
+    },
+    {
+      "path": "results/comparison-panel/DHSC-geographic-4.json",
+      "sha256": "6e1fd6b3a8d9e9e8cfe60a25b55f67b8eb0d7bc29dce50f726cd76375537d5b3"
+    },
+    {
+      "path": "results/comparison-panel/DfE-geographic-0.json",
+      "sha256": "795311e518a5c5ca47088c2677f837988e964b04f4f82262d95592a94c348264"
+    },
+    {
+      "path": "results/comparison-panel/DfE-geographic-1.json",
+      "sha256": "f63934696e9c1ade2a0fb2bd9077ec16d48cd398453f165d19f3fde96b14701f"
+    },
+    {
+      "path": "results/comparison-panel/DfE-geographic-2.json",
+      "sha256": "b33c5c1f3c6af8d70989558c9413f861fdf5d8a616f83575a4a30f86f940a0d7"
+    },
+    {
+      "path": "results/comparison-panel/DfE-geographic-3.json",
+      "sha256": "00527efd0f483950a7b1851c7d2c601e6040e77aa311dd53a304b83359458920"
+    },
+    {
+      "path": "results/comparison-panel/DfE-geographic-4.json",
+      "sha256": "37aae4b7e80c3dde41f52ca67d23cbcc19edba10811ada132b6ee361964cc2d2"
+    },
+    {
+      "path": "results/comparison-panel/DfE-forward-2025.json",
+      "sha256": "dccacd1586012c346f0306c888f0d30bdce41f384e5710dedc186d3af5a77aa1"
+    }
+  ],
+  "summaries": {
+    "DHSC:geographic": {
+      "authorities": 152,
+      "methods": {
+        "context_forest:point": {
+          "mape": 7.788969789091177,
+          "wape": 8.046151999148512,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 4643,
+          "wrong_on_resolved": 207,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.044583243592504845,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.766566714028769,
+              8.626503173626991
+            ],
+            "wape": [
+              6.53211585802339,
+              9.525620153131099
+            ],
+            "risk": [
+              0.030227357483091216,
+              0.060209248616506485
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9572368421052632,
+              0.9967105263157895
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 7.788969789091177,
+          "wape": 8.046151999148512,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 2803,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6033146792940164,
+          "coverage_resolved": 0.6037045013999569,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.766566714028769,
+              8.626503173626991
+            ],
+            "wape": [
+              6.53211585802339,
+              9.525620153131099
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5562953340061565,
+              0.6553253365049896
+            ],
+            "row_bin_coverage": [
+              0.9572368421052632,
+              0.9967105263157895
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 8.300480236180338,
+          "wape": 8.544151346863803,
+          "row_bin_coverage": 0.9638157894736842,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 4643,
+          "wrong_on_resolved": 224,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.04824466939478785,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.290411228796685,
+              9.17151229403095
+            ],
+            "wape": [
+              7.336529761547157,
+              9.6739457780783
+            ],
+            "risk": [
+              0.031668141082026126,
+              0.06723270129303871
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9341282894736842,
+              0.9901315789473685
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 8.300480236180338,
+          "wape": 8.544151346863803,
+          "row_bin_coverage": 0.9638157894736842,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 2730,
+          "wrong_on_resolved": 2,
+          "coverage_all": 0.587602238484718,
+          "coverage_resolved": 0.587981908248977,
+          "risk": 0.0007326007326007326,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.290411228796685,
+              9.17151229403095
+            ],
+            "wape": [
+              7.336529761547157,
+              9.6739457780783
+            ],
+            "risk": [
+              0.0,
+              0.004104676113600971
+            ],
+            "coverage_resolved": [
+              0.5288367693042445,
+              0.6468979138807972
+            ],
+            "row_bin_coverage": [
+              0.9341282894736842,
+              0.9901315789473685
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 8.78055558713073,
+          "wape": 8.30772544552072,
+          "row_bin_coverage": 0.9703947368421053,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 4637,
+          "wrong_on_resolved": 199,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.9987077320697825,
+          "risk": 0.042915678240241534,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.87988340989953,
+              9.810674537877153
+            ],
+            "wape": [
+              6.958461288538264,
+              9.959474932680834
+            ],
+            "risk": [
+              0.029185212411911906,
+              0.05686326275770194
+            ],
+            "coverage_resolved": [
+              0.9964359277554842,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9407894736842105,
+              0.993421052631579
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 8.78055558713073,
+          "wape": 8.30772544552072,
+          "row_bin_coverage": 0.9703947368421053,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 2762,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5944898837709858,
+          "coverage_resolved": 0.5948740038768038,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.87988340989953,
+              9.810674537877153
+            ],
+            "wape": [
+              6.958461288538264,
+              9.959474932680834
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5491404063924733,
+              0.65088439412197
+            ],
+            "row_bin_coverage": [
+              0.9407894736842105,
+              0.993421052631579
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 17.90461411603322,
+          "wape": 9.55520186125904,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 4550,
+          "wrong_on_resolved": 161,
+          "coverage_all": 0.9799827808867844,
+          "coverage_resolved": 0.9799698470816283,
+          "risk": 0.03538461538461538,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.149789822818553,
+              36.038924165888226
+            ],
+            "wape": [
+              8.065309719880856,
+              11.387272584273116
+            ],
+            "risk": [
+              0.022419885945193542,
+              0.04978919210351693
+            ],
+            "coverage_resolved": [
+              0.9669348057633232,
+              0.9869627121136103
+            ],
+            "row_bin_coverage": [
+              0.9275493421052632,
+              0.9835526315789473
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 17.90461411603322,
+          "wape": 9.55520186125904,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 2373,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5107619457597934,
+          "coverage_resolved": 0.5110919664010338,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.149789822818553,
+              36.038924165888226
+            ],
+            "wape": [
+              8.065309719880856,
+              11.387272584273116
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.4471507783901362,
+              0.5724867139091967
+            ],
+            "row_bin_coverage": [
+              0.9275493421052632,
+              0.9835526315789473
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 39.38567681217293,
+          "wape": 44.83592616861651,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 4637,
+          "wrong_on_resolved": 199,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.9987077320697825,
+          "risk": 0.042915678240241534,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              37.121141076091426,
+              41.78082749445369
+            ],
+            "wape": [
+              42.18053470922314,
+              47.86404975956861
+            ],
+            "risk": [
+              0.029185212411911906,
+              0.05686326275770194
+            ],
+            "coverage_resolved": [
+              0.9964359277554842,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9571546052631579,
+              0.9967105263157895
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 39.38567681217293,
+          "wape": 44.83592616861651,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 4646,
+          "resolved_queries": 4643,
+          "answers_on_resolved": 1586,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.34136891950064574,
+          "coverage_resolved": 0.34158948955416757,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              37.121141076091426,
+              41.78082749445369
+            ],
+            "wape": [
+              42.18053470922314,
+              47.86404975956861
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.2837965980805893,
+              0.4093251835666057
+            ],
+            "row_bin_coverage": [
+              0.9571546052631579,
+              0.9967105263157895
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.7882282815318926,
+            -0.39931849853529555
+          ],
+          "risk": [
+            -0.004840359485103379,
+            0.007291458039073165
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0035640722445158006
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.7882282815318926,
+            -0.39931849853529555
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.010052719689713547,
+            0.027106924939678628
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.4454400094602482,
+            0.2709657442546115
+          ],
+          "risk": [
+            -0.0008773115825729893,
+            0.013732734053188695
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0035640722445158006
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.4454400094602482,
+            0.2709657442546115
+          ],
+          "risk": [
+            0.0,
+            0.004104676113600971
+          ],
+          "coverage_resolved": [
+            -0.042021186170127824,
+            0.04080001133016099
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.3659865144377919,
+            26.96884596688076
+          ],
+          "risk": [
+            -0.01496008447488183,
+            -0.0032651386229843363
+          ],
+          "coverage_resolved": [
+            -0.03049456041174013,
+            -0.011964677584826961
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.3659865144377919,
+            26.96884596688076
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.1311015158499683,
+            -0.04490514757746263
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            28.239516798859963,
+            32.90291121510068
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            28.239516798859963,
+            32.90291121510068
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.28824216007943765,
+            -0.21759915908332933
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:forward": {
+      "authorities": 151,
+      "methods": {
+        "context_forest:point": {
+          "mape": 1.315707514388951,
+          "wape": 1.1810938117885261,
+          "row_bin_coverage": 0.9834437086092715,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 302,
+          "wrong_on_resolved": 11,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.03642384105960265,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1245021545071832,
+              1.5538255569965431
+            ],
+            "wape": [
+              0.9895596498255931,
+              1.3764307897579537
+            ],
+            "risk": [
+              0.016556291390728478,
+              0.056374172185430484
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9635761589403974,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 1.315707514388951,
+          "wape": 1.1810938117885261,
+          "row_bin_coverage": 0.9834437086092715,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 168,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5562913907284768,
+          "coverage_resolved": 0.5562913907284768,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1245021545071832,
+              1.5538255569965431
+            ],
+            "wape": [
+              0.9895596498255931,
+              1.3764307897579537
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.49337748344370863,
+              0.6093543046357616
+            ],
+            "row_bin_coverage": [
+              0.9635761589403974,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 1.3276298871171326,
+          "wape": 1.2278797938876969,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 302,
+          "wrong_on_resolved": 10,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.033112582781456956,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1339767923033703,
+              1.5712781500226256
+            ],
+            "wape": [
+              1.05710401117499,
+              1.4079976978995246
+            ],
+            "risk": [
+              0.013245033112582781,
+              0.056291390728476824
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              0.9966887417218543
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 1.3276298871171326,
+          "wape": 1.2278797938876969,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 177,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5860927152317881,
+          "coverage_resolved": 0.5860927152317881,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1339767923033703,
+              1.5712781500226256
+            ],
+            "wape": [
+              1.05710401117499,
+              1.4079976978995246
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.526407284768212,
+              0.6457781456953642
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              0.9966887417218543
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 2.545025892886694,
+          "wape": 2.329999109555938,
+          "row_bin_coverage": 0.9834437086092715,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 302,
+          "wrong_on_resolved": 22,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.0728476821192053,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.315335690155286,
+              2.808142902057878
+            ],
+            "wape": [
+              2.047826685554151,
+              2.636156936175025
+            ],
+            "risk": [
+              0.046357615894039736,
+              0.09610927152317883
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9634933774834438,
+              0.9966887417218543
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 2.545025892886694,
+          "wape": 2.329999109555938,
+          "row_bin_coverage": 0.9834437086092715,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 157,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5198675496688742,
+          "coverage_resolved": 0.5198675496688742,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.315335690155286,
+              2.808142902057878
+            ],
+            "wape": [
+              2.047826685554151,
+              2.636156936175025
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.46001655629139077,
+              0.5763245033112583
+            ],
+            "row_bin_coverage": [
+              0.9634933774834438,
+              0.9966887417218543
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 2.177520793568346,
+          "wape": 2.4428441423573535,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 302,
+          "wrong_on_resolved": 18,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.059602649006622516,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.9544722233807592,
+              2.5612834577175243
+            ],
+            "wape": [
+              2.1579418014784584,
+              2.889834855650401
+            ],
+            "risk": [
+              0.03642384105960265,
+              0.08940397350993377
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9503311258278145,
+              0.9900662251655629
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 2.177520793568346,
+          "wape": 2.4428441423573535,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 164,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.543046357615894,
+          "coverage_resolved": 0.543046357615894,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.9544722233807592,
+              2.5612834577175243
+            ],
+            "wape": [
+              2.1579418014784584,
+              2.889834855650401
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.48013245033112584,
+              0.5960264900662252
+            ],
+            "row_bin_coverage": [
+              0.9503311258278145,
+              0.9900662251655629
+            ]
+          }
+        },
+        "lagged_factor:point": {
+          "mape": 1.612673678412429,
+          "wape": 1.4222264840808634,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 301,
+          "wrong_on_resolved": 9,
+          "coverage_all": 0.9966887417218543,
+          "coverage_resolved": 0.9966887417218543,
+          "risk": 0.029900332225913623,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.3819452190883832,
+              1.852472725297173
+            ],
+            "wape": [
+              1.2297777769253178,
+              1.739989495829984
+            ],
+            "risk": [
+              0.013289036544850499,
+              0.04690217391304349
+            ],
+            "coverage_resolved": [
+              0.9900662251655629,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9503311258278145,
+              0.9933774834437086
+            ]
+          }
+        },
+        "lagged_factor:guard": {
+          "mape": 1.612673678412429,
+          "wape": 1.4222264840808634,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 183,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6059602649006622,
+          "coverage_resolved": 0.6059602649006622,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.3819452190883832,
+              1.852472725297173
+            ],
+            "wape": [
+              1.2297777769253178,
+              1.739989495829984
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5528973509933776,
+              0.6623344370860927
+            ],
+            "row_bin_coverage": [
+              0.9503311258278145,
+              0.9933774834437086
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 9.126404036898064,
+          "wape": 9.256823345210833,
+          "row_bin_coverage": 0.9933774834437086,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 302,
+          "wrong_on_resolved": 85,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.2814569536423841,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.698025811762095,
+              9.644653293463202
+            ],
+            "wape": [
+              8.741168867647845,
+              9.793152189988785
+            ],
+            "risk": [
+              0.22508278145695365,
+              0.3344370860927152
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9833609271523179,
+              1.0
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 9.126404036898064,
+          "wape": 9.256823345210833,
+          "row_bin_coverage": 0.9933774834437086,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 302,
+          "resolved_queries": 302,
+          "answers_on_resolved": 65,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.2152317880794702,
+          "coverage_resolved": 0.2152317880794702,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.698025811762095,
+              9.644653293463202
+            ],
+            "wape": [
+              8.741168867647845,
+              9.793152189988785
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.15223509933774834,
+              0.2649834437086093
+            ],
+            "row_bin_coverage": [
+              0.9833609271523179,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.4993028663245882,
+            -1.0000450425734042
+          ],
+          "risk": [
+            -0.06291390728476821,
+            -0.006622516556291397
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.4993028663245882,
+            -1.0000450425734042
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.06953642384105962
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.4704250703556152,
+            -0.9528851005454412
+          ],
+          "risk": [
+            -0.05960264900662252,
+            -0.016556291390728478
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.4704250703556152,
+            -0.9528851005454412
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.03642384105960261,
+            0.09619205298013253
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.5608114555301315,
+            -0.14165576902334803
+          ],
+          "risk": [
+            -0.033112582781456956,
+            0.009933774834437081
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.5608114555301315,
+            -0.14165576902334803
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.006705298013245063,
+            0.04966887417218541
+          ]
+        },
+        "lagged_factor:point minus family_factor:point": {
+          "mape": [
+            -1.2514653075795636,
+            -0.6676422593009416
+          ],
+          "risk": [
+            -0.06630047177124632,
+            -0.01646745946183802
+          ],
+          "coverage_resolved": [
+            -0.009933774834437137,
+            0.0
+          ]
+        },
+        "lagged_factor:guard minus family_factor:guard": {
+          "mape": [
+            -1.2514653075795636,
+            -0.6676422593009416
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.04966887417218546,
+            0.12922185430463579
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            6.123437876656606,
+            7.086587981275506
+          ],
+          "risk": [
+            0.1423841059602649,
+            0.26821192052980136
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            6.123437876656606,
+            7.086587981275506
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.3709437086092715,
+            -0.24834437086092717
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:geographic": {
+      "authorities": 153,
+      "methods": {
+        "context_forest:point": {
+          "mape": 2.1549723032828316,
+          "wape": 2.53931372713348,
+          "row_bin_coverage": 0.9836601307189542,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 4688,
+          "wrong_on_resolved": 52,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.011092150170648464,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8537126621993922,
+              2.452735901487161
+            ],
+            "wape": [
+              1.828004096430222,
+              3.9359436457187407
+            ],
+            "risk": [
+              0.0055748832301549716,
+              0.017992086375668556
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9673202614379085,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 2.1549723032828316,
+          "wape": 2.53931372713348,
+          "row_bin_coverage": 0.9836601307189542,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 3450,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7356076759061834,
+          "coverage_resolved": 0.7359215017064846,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8537126621993922,
+              2.452735901487161
+            ],
+            "wape": [
+              1.828004096430222,
+              3.9359436457187407
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6823809864424686,
+              0.7883538115312245
+            ],
+            "row_bin_coverage": [
+              0.9673202614379085,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 2.3283604265935445,
+          "wape": 2.631040530939722,
+          "row_bin_coverage": 0.9836601307189542,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 4688,
+          "wrong_on_resolved": 55,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.011732081911262798,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.0409795990034167,
+              2.6566159353468626
+            ],
+            "wape": [
+              1.992768671640941,
+              3.7960408236190255
+            ],
+            "risk": [
+              0.007230088791612108,
+              0.01928668326745218
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9673202614379085,
+              0.9967320261437909
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 2.3283604265935445,
+          "wape": 2.631040530939722,
+          "row_bin_coverage": 0.9836601307189542,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 3343,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7127931769722814,
+          "coverage_resolved": 0.7130972696245734,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.0409795990034167,
+              2.6566159353468626
+            ],
+            "wape": [
+              1.992768671640941,
+              3.7960408236190255
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6591949841305987,
+              0.7678061413350035
+            ],
+            "row_bin_coverage": [
+              0.9673202614379085,
+              0.9967320261437909
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 2.592471161039641,
+          "wape": 2.9374257513227,
+          "row_bin_coverage": 0.9869281045751634,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 4688,
+          "wrong_on_resolved": 55,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.011732081911262798,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.303737349377702,
+              2.9172903975422595
+            ],
+            "wape": [
+              2.142133101207419,
+              4.533856073988877
+            ],
+            "risk": [
+              0.006655728601358003,
+              0.01938674189716981
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9705882352941176,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 2.592471161039641,
+          "wape": 2.9374257513227,
+          "row_bin_coverage": 0.9869281045751634,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 3436,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.7326226012793177,
+          "coverage_resolved": 0.7329351535836177,
+          "risk": 0.0002910360884749709,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.303737349377702,
+              2.9172903975422595
+            ],
+            "wape": [
+              2.142133101207419,
+              4.533856073988877
+            ],
+            "risk": [
+              0.0,
+              0.0017454175090410172
+            ],
+            "coverage_resolved": [
+              0.6865457430455155,
+              0.7886058154536415
+            ],
+            "row_bin_coverage": [
+              0.9705882352941176,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 35.216356210261026,
+          "wape": 3.8103920269725617,
+          "row_bin_coverage": 0.9705882352941176,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 4658,
+          "wrong_on_resolved": 45,
+          "coverage_all": 0.9936034115138592,
+          "coverage_resolved": 0.9936006825938567,
+          "risk": 0.009660798626019752,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.3984372002317182,
+              100.59243197837431
+            ],
+            "wape": [
+              2.4476095612459714,
+              5.454220934308954
+            ],
+            "risk": [
+              0.0046858674150009934,
+              0.0167783857823774
+            ],
+            "coverage_resolved": [
+              0.9894187653631787,
+              0.9971463862224732
+            ],
+            "row_bin_coverage": [
+              0.9411764705882353,
+              0.9934640522875817
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 35.216356210261026,
+          "wape": 3.8103920269725617,
+          "row_bin_coverage": 0.9705882352941176,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 2380,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.5074626865671642,
+          "coverage_resolved": 0.507679180887372,
+          "risk": 0.0004201680672268908,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.3984372002317182,
+              100.59243197837431
+            ],
+            "wape": [
+              2.4476095612459714,
+              5.454220934308954
+            ],
+            "risk": [
+              0.0,
+              0.0026287687424540627
+            ],
+            "coverage_resolved": [
+              0.38466666317151904,
+              0.6181872405275816
+            ],
+            "row_bin_coverage": [
+              0.9411764705882353,
+              0.9934640522875817
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 9.262270759414214,
+          "wape": 10.03870914584776,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 4688,
+          "wrong_on_resolved": 55,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.011732081911262798,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.745030296709988,
+              9.737856070230702
+            ],
+            "wape": [
+              8.833723112357637,
+              12.196286995975285
+            ],
+            "risk": [
+              0.006655728601358003,
+              0.01938674189716981
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9640522875816994,
+              0.9934640522875817
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 9.262270759414214,
+          "wape": 10.03870914584776,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 4690,
+          "resolved_queries": 4688,
+          "answers_on_resolved": 2758,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5880597014925373,
+          "coverage_resolved": 0.5883105802047781,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.745030296709988,
+              9.737856070230702
+            ],
+            "wape": [
+              8.833723112357637,
+              12.196286995975285
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5162466695596744,
+              0.6491076167768318
+            ],
+            "row_bin_coverage": [
+              0.9640522875816994,
+              0.9934640522875817
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -0.6514431878385238,
+            -0.221275474648772
+          ],
+          "risk": [
+            -0.0036463427147543246,
+            0.002357664273244983
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -0.6514431878385238,
+            -0.221275474648772
+          ],
+          "risk": [
+            -0.001745417509041017,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.01901511528805108,
+            0.02002989736724679
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -0.47636836016389417,
+            -0.013413516666154987
+          ],
+          "risk": [
+            -0.0028438483421467545,
+            0.00303829325768853
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -0.47636836016389417,
+            -0.013413516666154987
+          ],
+          "risk": [
+            -0.001745417509041017,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.042777201084141535,
+            -0.0013708897324751915
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.05852317612854518,
+            98.02257842580404
+          ],
+          "risk": [
+            -0.004665987006567746,
+            -0.0003794458864035473
+          ],
+          "coverage_resolved": [
+            -0.010581234636821224,
+            -0.002853613777526853
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.05852317612854518,
+            98.02257842580404
+          ],
+          "risk": [
+            0.0,
+            0.0009638649045089891
+          ],
+          "coverage_resolved": [
+            -0.3533481348347424,
+            -0.1292865960178713
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            6.259031228149242,
+            7.143194536194857
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            6.259031228149242,
+            7.143194536194857
+          ],
+          "risk": [
+            -0.001745417509041017,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.1762351572420548,
+            -0.11599929208327849
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    }
+  },
+  "family_summaries": {
+    "DHSC:geographic:requests age 18 to 64": {
+      "authorities": 152,
+      "methods": {
+        "context_forest:point": {
+          "mape": 7.418772741036599,
+          "wape": 7.7031276171766025,
+          "row_bin_coverage": 0.9736842105263158,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 2322,
+          "wrong_on_resolved": 96,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.041343669250646,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.279762386519917,
+              8.414003093178547
+            ],
+            "wape": [
+              5.9518064820833985,
+              9.562770393881856
+            ],
+            "risk": [
+              0.024958559980577534,
+              0.061703557493610325
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9407894736842105,
+              0.993421052631579
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 7.418772741036599,
+          "wape": 7.7031276171766025,
+          "row_bin_coverage": 0.9736842105263158,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 1487,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6401205337925097,
+          "coverage_resolved": 0.640396210163652,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.279762386519917,
+              8.414003093178547
+            ],
+            "wape": [
+              5.9518064820833985,
+              9.562770393881856
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5896627813075629,
+              0.6956783539541558
+            ],
+            "row_bin_coverage": [
+              0.9407894736842105,
+              0.993421052631579
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 7.524540240584388,
+          "wape": 8.08654031801474,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 2322,
+          "wrong_on_resolved": 91,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.03919035314384152,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.517814760149,
+              8.50640005566899
+            ],
+            "wape": [
+              6.738093740918025,
+              9.652701782332146
+            ],
+            "risk": [
+              0.023989397594099262,
+              0.058529435114789016
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9342105263157895,
+              0.993421052631579
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 7.524540240584388,
+          "wape": 8.08654031801474,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 1455,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.6263452432199742,
+          "coverage_resolved": 0.6266149870801033,
+          "risk": 0.0006872852233676976,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.517814760149,
+              8.50640005566899
+            ],
+            "wape": [
+              6.738093740918025,
+              9.652701782332146
+            ],
+            "risk": [
+              0.0,
+              0.003787541843717308
+            ],
+            "coverage_resolved": [
+              0.5692438445900159,
+              0.6869962041357747
+            ],
+            "row_bin_coverage": [
+              0.9342105263157895,
+              0.993421052631579
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 8.178644974835315,
+          "wape": 7.513194696153002,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 2319,
+          "wrong_on_resolved": 84,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.9987080103359173,
+          "risk": 0.03622250970245795,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.183374602723382,
+              9.321623840459898
+            ],
+            "wape": [
+              5.887520289958236,
+              9.281947152085804
+            ],
+            "risk": [
+              0.021720648234352893,
+              0.05392464744811338
+            ],
+            "coverage_resolved": [
+              0.9960417200488073,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9210526315789473,
+              0.9868421052631579
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 8.178644974835315,
+          "wape": 7.513194696153002,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 1467,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.631510977184675,
+          "coverage_resolved": 0.6317829457364341,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.183374602723382,
+              9.321623840459898
+            ],
+            "wape": [
+              5.887520289958236,
+              9.281947152085804
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5797357351974667,
+              0.6860411386408318
+            ],
+            "row_bin_coverage": [
+              0.9210526315789473,
+              0.9868421052631579
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 17.478743571043655,
+          "wape": 11.307217203579842,
+          "row_bin_coverage": 0.9539473684210527,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 2285,
+          "wrong_on_resolved": 70,
+          "coverage_all": 0.9840723202755058,
+          "coverage_resolved": 0.9840654608096469,
+          "risk": 0.030634573304157548,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.275526382071968,
+              34.16122109364288
+            ],
+            "wape": [
+              8.241875786604835,
+              15.732203685772017
+            ],
+            "risk": [
+              0.016499860647562283,
+              0.048727772945961305
+            ],
+            "coverage_resolved": [
+              0.9705151646777511,
+              0.992108235604215
+            ],
+            "row_bin_coverage": [
+              0.9144736842105263,
+              0.9802631578947368
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 17.478743571043655,
+          "wape": 11.307217203579842,
+          "row_bin_coverage": 0.9539473684210527,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 1253,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5393887214808437,
+          "coverage_resolved": 0.5396210163652024,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.275526382071968,
+              34.16122109364288
+            ],
+            "wape": [
+              8.241875786604835,
+              15.732203685772017
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.46403366911825594,
+              0.6060547892709071
+            ],
+            "row_bin_coverage": [
+              0.9144736842105263,
+              0.9802631578947368
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 32.61855911502224,
+          "wape": 35.843278173075944,
+          "row_bin_coverage": 0.993421052631579,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 2319,
+          "wrong_on_resolved": 84,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.9987080103359173,
+          "risk": 0.03622250970245795,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              30.56501506173245,
+              34.60275613626872
+            ],
+            "wape": [
+              33.25270204050733,
+              38.49208519957855
+            ],
+            "risk": [
+              0.021720648234352893,
+              0.05392464744811338
+            ],
+            "coverage_resolved": [
+              0.9960417200488073,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9800986842105263,
+              1.0
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 32.61855911502224,
+          "wape": 35.843278173075944,
+          "row_bin_coverage": 0.993421052631579,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 2323,
+          "resolved_queries": 2322,
+          "answers_on_resolved": 820,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.35299182092122255,
+          "coverage_resolved": 0.35314384151593453,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              30.56501506173245,
+              34.60275613626872
+            ],
+            "wape": [
+              33.25270204050733,
+              38.49208519957855
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.28875560997876365,
+              0.42443366528618964
+            ],
+            "row_bin_coverage": [
+              0.9800986842105263,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.5932752609742848,
+            -0.06383971483224597
+          ],
+          "risk": [
+            -0.00142727175246169,
+            0.012186550718967754
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0039582799511927455
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.5932752609742848,
+            -0.06383971483224597
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.016527645644919143,
+            0.02905826852716613
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.5032229641416373,
+            0.17010334413746783
+          ],
+          "risk": [
+            -0.004326344213657399,
+            0.01048110656880052
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0039582799511927455
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.5032229641416373,
+            0.17010334413746783
+          ],
+          "risk": [
+            0.0,
+            0.003787541843717308
+          ],
+          "coverage_resolved": [
+            -0.041131231835457215,
+            0.04494739344221063
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            0.4341594466898783,
+            25.802755239356358
+          ],
+          "risk": [
+            -0.013192618237651547,
+            -0.0013976206682613692
+          ],
+          "coverage_resolved": [
+            -0.02737533290295325,
+            -0.0066123710491336925
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            0.4341594466898783,
+            25.802755239356358
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.15004417469903608,
+            -0.04573491672117953
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            22.366783361128196,
+            26.41869105608558
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            22.366783361128196,
+            26.41869105608558
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.3185992092741048,
+            -0.2365095505632302
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DHSC:geographic:requests age 65 and over": {
+      "authorities": 152,
+      "methods": {
+        "context_forest:point": {
+          "mape": 8.159166837145756,
+          "wape": 8.239610648716546,
+          "row_bin_coverage": 0.9868421052631579,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 2321,
+          "wrong_on_resolved": 111,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.04782421370099095,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.201190381534919,
+              9.151075001134062
+            ],
+            "wape": [
+              6.84665182458393,
+              9.61397219096654
+            ],
+            "risk": [
+              0.02661243750430472,
+              0.06706555105352019
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9671052631578947,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 8.159166837145756,
+          "wape": 8.239610648716546,
+          "row_bin_coverage": 0.9868421052631579,
+          "authority_vector_coverage": 0.9736842105263158,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 1316,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.566508824795523,
+          "coverage_resolved": 0.5669969840585954,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.201190381534919,
+              9.151075001134062
+            ],
+            "wape": [
+              6.84665182458393,
+              9.61397219096654
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.508280324964349,
+              0.6385674426678277
+            ],
+            "row_bin_coverage": [
+              0.9671052631578947,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 9.07642023177629,
+          "wape": 8.802234492906258,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 2321,
+          "wrong_on_resolved": 133,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.05730288668677294,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.00846054613508,
+              10.136212106226555
+            ],
+            "wape": [
+              7.418439996765195,
+              10.053204465616133
+            ],
+            "risk": [
+              0.034621972334703134,
+              0.07769919501801976
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9274671052631579,
+              0.993421052631579
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 9.07642023177629,
+          "wape": 8.802234492906258,
+          "row_bin_coverage": 0.9605263157894737,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 1275,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.5488592337494619,
+          "coverage_resolved": 0.5493321844032745,
+          "risk": 0.000784313725490196,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.00846054613508,
+              10.136212106226555
+            ],
+            "wape": [
+              7.418439996765195,
+              10.053204465616133
+            ],
+            "risk": [
+              0.0,
+              0.0044800881177635855
+            ],
+            "coverage_resolved": [
+              0.4846065072302559,
+              0.6161354233827638
+            ],
+            "row_bin_coverage": [
+              0.9274671052631579,
+              0.993421052631579
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 9.382466199426142,
+          "wape": 8.755824338460478,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 2318,
+          "wrong_on_resolved": 115,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.998707453683757,
+          "risk": 0.04961173425366695,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.330029788057209,
+              10.59162219581684
+            ],
+            "wape": [
+              7.538989728381763,
+              10.359931557697527
+            ],
+            "risk": [
+              0.028488580073915085,
+              0.06948034997507675
+            ],
+            "coverage_resolved": [
+              0.9949740542075882,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9539473684210527,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 9.382466199426142,
+          "wape": 8.755824338460478,
+          "row_bin_coverage": 0.9802631578947368,
+          "authority_vector_coverage": 0.9605263157894737,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 1295,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5574687903572966,
+          "coverage_resolved": 0.5579491598448945,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              8.330029788057209,
+              10.59162219581684
+            ],
+            "wape": [
+              7.538989728381763,
+              10.359931557697527
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5039275840573095,
+              0.6308936226827898
+            ],
+            "row_bin_coverage": [
+              0.9539473684210527,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 18.330484661022776,
+          "wape": 8.567101481340226,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 2265,
+          "wrong_on_resolved": 91,
+          "coverage_all": 0.9758932414980629,
+          "coverage_resolved": 0.975872468763464,
+          "risk": 0.040176600441501106,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.8775562807279975,
+              37.938852839416576
+            ],
+            "wape": [
+              7.437403053178922,
+              9.677880049860256
+            ],
+            "risk": [
+              0.02325700146691374,
+              0.05826772346712977
+            ],
+            "coverage_resolved": [
+              0.9551901069067197,
+              0.9869517962653377
+            ],
+            "row_bin_coverage": [
+              0.9342105263157895,
+              0.9870065789473684
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 18.330484661022776,
+          "wape": 8.567101481340226,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9473684210526315,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 1120,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.482135170038743,
+          "coverage_resolved": 0.4825506247307195,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              7.8775562807279975,
+              37.938852839416576
+            ],
+            "wape": [
+              7.437403053178922,
+              9.677880049860256
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.41594904058252885,
+              0.5558837473593207
+            ],
+            "row_bin_coverage": [
+              0.9342105263157895,
+              0.9870065789473684
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 46.15279450932363,
+          "wape": 49.90759345727133,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 2318,
+          "wrong_on_resolved": 115,
+          "coverage_all": 0.9987085665088248,
+          "coverage_resolved": 0.998707453683757,
+          "risk": 0.04961173425366695,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              43.707621001095625,
+              48.78292471176429
+            ],
+            "wape": [
+              47.13720631038241,
+              53.14334837144753
+            ],
+            "risk": [
+              0.028488580073915085,
+              0.06948034997507675
+            ],
+            "coverage_resolved": [
+              0.9949740542075882,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9340460526315789,
+              0.993421052631579
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 46.15279450932363,
+          "wape": 49.90759345727133,
+          "row_bin_coverage": 0.9671052631578947,
+          "authority_vector_coverage": 0.9671052631578947,
+          "queries": 2323,
+          "resolved_queries": 2321,
+          "answers_on_resolved": 766,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.32974601808006887,
+          "coverage_resolved": 0.3300301594140457,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              43.707621001095625,
+              48.78292471176429
+            ],
+            "wape": [
+              47.13720631038241,
+              53.14334837144753
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.2662768352473155,
+              0.4004549739319854
+            ],
+            "row_bin_coverage": [
+              0.9340460526315789,
+              0.993421052631579
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -2.1488266090370045,
+            -0.4079355905751978
+          ],
+          "risk": [
+            -0.011376422414114391,
+            0.005445644067972575
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.005025945792411783
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -2.1488266090370045,
+            -0.4079355905751978
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.015072407458735388,
+            0.03289691757518908
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.4609602092053284,
+            0.5888791479313253
+          ],
+          "risk": [
+            -0.0013219551516928255,
+            0.019836050610338836
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.005025945792411783
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.4609602092053284,
+            0.5888791479313253
+          ],
+          "risk": [
+            0.0,
+            0.0044800881177635855
+          ],
+          "coverage_resolved": [
+            -0.04628872505704075,
+            0.041896719671967154
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -1.294664760408197,
+            28.195285516356712
+          ],
+          "risk": [
+            -0.02132502259777392,
+            -0.0029997024265731747
+          ],
+          "coverage_resolved": [
+            -0.041148482210640346,
+            -0.012646289382641734
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -1.294664760408197,
+            28.195285516356712
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.12361080818480344,
+            -0.03586000879610956
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            34.04690764577947,
+            39.383466379772536
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            34.04690764577947,
+            39.383466379772536
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.2624804861792634,
+            -0.18193651952889248
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:forward:need any point": {
+      "authorities": 151,
+      "methods": {
+        "context_forest:point": {
+          "mape": 1.1178390153845326,
+          "wape": 1.0579449077670298,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 4,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.026490066225165563,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              0.9241473037531588,
+              1.3086982045353308
+            ],
+            "wape": [
+              0.8345115937909857,
+              1.269810409789519
+            ],
+            "risk": [
+              0.006622516556291391,
+              0.052980132450331126
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 1.1178390153845326,
+          "wape": 1.0579449077670298,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 79,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5231788079470199,
+          "coverage_resolved": 0.5231788079470199,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              0.9241473037531588,
+              1.3086982045353308
+            ],
+            "wape": [
+              0.8345115937909857,
+              1.269810409789519
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.44370860927152317,
+              0.6026490066225165
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 1.092213507433861,
+          "wape": 1.06104999820788,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 3,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.019867549668874173,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              0.9135160395402283,
+              1.2886831963119023
+            ],
+            "wape": [
+              0.8669323697322596,
+              1.2765233040825303
+            ],
+            "risk": [
+              0.0,
+              0.03990066225165567
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 1.092213507433861,
+          "wape": 1.06104999820788,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 83,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5496688741721855,
+          "coverage_resolved": 0.5496688741721855,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              0.9135160395402283,
+              1.2886831963119023
+            ],
+            "wape": [
+              0.8669323697322596,
+              1.2765233040825303
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.47665562913907283,
+              0.6293046357615895
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 2.057291558445831,
+          "wape": 2.012694544996561,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 8,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.052980132450331126,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8556520562034788,
+              2.316224164409285
+            ],
+            "wape": [
+              1.7217475917213114,
+              2.3518813043245763
+            ],
+            "risk": [
+              0.019867549668874173,
+              0.09271523178807947
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 2.057291558445831,
+          "wape": 2.012694544996561,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 74,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.4900662251655629,
+          "coverage_resolved": 0.4900662251655629,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8556520562034788,
+              2.316224164409285
+            ],
+            "wape": [
+              1.7217475917213114,
+              2.3518813043245763
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.41688741721854305,
+              0.569701986754967
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 1.9328752775433864,
+          "wape": 2.2663635061411074,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 5,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.033112582781456956,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.744951989803506,
+              2.240245924149247
+            ],
+            "wape": [
+              1.9202529986379473,
+              2.7322369072991246
+            ],
+            "risk": [
+              0.006622516556291391,
+              0.059602649006622516
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              0.9933774834437086
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 1.9328752775433864,
+          "wape": 2.2663635061411074,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 78,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5165562913907285,
+          "coverage_resolved": 0.5165562913907285,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.744951989803506,
+              2.240245924149247
+            ],
+            "wape": [
+              1.9202529986379473,
+              2.7322369072991246
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.4370860927152318,
+              0.5894039735099338
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              0.9933774834437086
+            ]
+          }
+        },
+        "lagged_factor:point": {
+          "mape": 1.309665428353733,
+          "wape": 1.219051271068534,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 2,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.013245033112582781,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1153118742431778,
+              1.6032359748040326
+            ],
+            "wape": [
+              1.0106259080555857,
+              1.5186355169820587
+            ],
+            "risk": [
+              0.0,
+              0.033112582781456956
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9470198675496688,
+              0.9933774834437086
+            ]
+          }
+        },
+        "lagged_factor:guard": {
+          "mape": 1.309665428353733,
+          "wape": 1.219051271068534,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 85,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5629139072847682,
+          "coverage_resolved": 0.5629139072847682,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.1153118742431778,
+              1.6032359748040326
+            ],
+            "wape": [
+              1.0106259080555857,
+              1.5186355169820587
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.4900662251655629,
+              0.6490066225165563
+            ],
+            "row_bin_coverage": [
+              0.9470198675496688,
+              0.9933774834437086
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 6.826428220699084,
+          "wape": 7.137445624750834,
+          "row_bin_coverage": 1.0,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 41,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.271523178807947,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.46066518251871,
+              7.237932167425939
+            ],
+            "wape": [
+              6.643148494354926,
+              7.67235992687384
+            ],
+            "risk": [
+              0.1986754966887417,
+              0.3443708609271523
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 6.826428220699084,
+          "wape": 7.137445624750834,
+          "row_bin_coverage": 1.0,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 23,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.152317880794702,
+          "coverage_resolved": 0.152317880794702,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.46066518251871,
+              7.237932167425939
+            ],
+            "wape": [
+              6.643148494354926,
+              7.67235992687384
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.09933774834437085,
+              0.2185430463576159
+            ],
+            "row_bin_coverage": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.1586220057643963,
+            -0.7215908372253843
+          ],
+          "risk": [
+            -0.06622516556291391,
+            0.013245033112582783
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.1586220057643963,
+            -0.7215908372253843
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.020033112582781443,
+            0.0730132450331126
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.1581292225752473,
+            -0.7721935452297404
+          ],
+          "risk": [
+            -0.0662251655629139,
+            -0.0064569536423840675
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.1581292225752473,
+            -0.7721935452297404
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.013245033112582849,
+            0.09933774834437087
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.30377655448502694,
+            0.11644405811954789
+          ],
+          "risk": [
+            -0.052980132450331126,
+            0.013410596026490106
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.30377655448502694,
+            0.11644405811954789
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.05960264900662249
+          ]
+        },
+        "lagged_factor:point minus family_factor:point": {
+          "mape": [
+            -1.0353707420549825,
+            -0.4764184544315607
+          ],
+          "risk": [
+            -0.0728476821192053,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "lagged_factor:guard minus family_factor:guard": {
+          "mape": [
+            -1.0353707420549825,
+            -0.4764184544315607
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.019701986754966882,
+            0.13245033112582782
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            4.3567484579899025,
+            5.209082032843451
+          ],
+          "risk": [
+            0.1456953642384106,
+            0.2913907284768212
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            4.3567484579899025,
+            5.209082032843451
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.4173841059602649,
+            -0.28460264900662247
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:forward:referrals": {
+      "authorities": 151,
+      "methods": {
+        "context_forest:point": {
+          "mape": 1.5135760133933691,
+          "wape": 1.3400268251011662,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 7,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.046357615894039736,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.2466324733313439,
+              1.8305231311438626
+            ],
+            "wape": [
+              1.0951986611624378,
+              1.577607842487215
+            ],
+            "risk": [
+              0.019701986754966892,
+              0.0862582781456954
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9667218543046359,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 1.5135760133933691,
+          "wape": 1.3400268251011662,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 89,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5894039735099338,
+          "coverage_resolved": 0.5894039735099338,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.2466324733313439,
+              1.8305231311438626
+            ],
+            "wape": [
+              1.0951986611624378,
+              1.577607842487215
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5165562913907285,
+              0.6622516556291391
+            ],
+            "row_bin_coverage": [
+              0.9667218543046359,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 1.563046266800404,
+          "wape": 1.4431863152766087,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 7,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.046357615894039736,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.28213827031602,
+              1.927490922385439
+            ],
+            "wape": [
+              1.2144842793144233,
+              1.664481472147761
+            ],
+            "risk": [
+              0.019867549668874173,
+              0.07947019867549669
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 1.563046266800404,
+          "wape": 1.4431863152766087,
+          "row_bin_coverage": 0.9801324503311258,
+          "authority_vector_coverage": 0.9668874172185431,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 94,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6225165562913907,
+          "coverage_resolved": 0.6225165562913907,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.28213827031602,
+              1.927490922385439
+            ],
+            "wape": [
+              1.2144842793144233,
+              1.664481472147761
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5495033112582782,
+              0.695364238410596
+            ],
+            "row_bin_coverage": [
+              0.9536423841059603,
+              1.0
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 3.0327602273275556,
+          "wape": 2.7395047481483368,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 14,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.09271523178807947,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.6913841005448367,
+              3.411045969199418
+            ],
+            "wape": [
+              2.3865974164161763,
+              3.190354209794872
+            ],
+            "risk": [
+              0.046357615894039736,
+              0.1390728476821192
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 3.0327602273275556,
+          "wape": 2.7395047481483368,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9735099337748344,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 83,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5496688741721855,
+          "coverage_resolved": 0.5496688741721855,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.6913841005448367,
+              3.411045969199418
+            ],
+            "wape": [
+              2.3865974164161763,
+              3.190354209794872
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.47019867549668876,
+              0.6094370860927153
+            ],
+            "row_bin_coverage": [
+              0.9602649006622517,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 2.4221663095933055,
+          "wape": 2.6706058064017513,
+          "row_bin_coverage": 0.9668874172185431,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 13,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.08609271523178808,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.0272463980248165,
+              2.9516846257412213
+            ],
+            "wape": [
+              2.2917570299871777,
+              3.2158747334723703
+            ],
+            "risk": [
+              0.046357615894039736,
+              0.13245033112582782
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9337748344370861,
+              0.9933774834437086
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 2.4221663095933055,
+          "wape": 2.6706058064017513,
+          "row_bin_coverage": 0.9668874172185431,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 86,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5695364238410596,
+          "coverage_resolved": 0.5695364238410596,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.0272463980248165,
+              2.9516846257412213
+            ],
+            "wape": [
+              2.2917570299871777,
+              3.2158747334723703
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.496523178807947,
+              0.6357615894039735
+            ],
+            "row_bin_coverage": [
+              0.9337748344370861,
+              0.9933774834437086
+            ]
+          }
+        },
+        "lagged_factor:point": {
+          "mape": 1.915681928471125,
+          "wape": 1.6844395268282872,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 150,
+          "wrong_on_resolved": 7,
+          "coverage_all": 0.9933774834437086,
+          "coverage_resolved": 0.9933774834437086,
+          "risk": 0.04666666666666667,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.6148450729137191,
+              2.2495121666029663
+            ],
+            "wape": [
+              1.4456185471476777,
+              2.014949719519872
+            ],
+            "risk": [
+              0.019996688741721856,
+              0.08067580781368064
+            ],
+            "coverage_resolved": [
+              0.9801324503311258,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9403973509933775,
+              1.0
+            ]
+          }
+        },
+        "lagged_factor:guard": {
+          "mape": 1.915681928471125,
+          "wape": 1.6844395268282872,
+          "row_bin_coverage": 0.9735099337748344,
+          "authority_vector_coverage": 0.9602649006622517,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 98,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6490066225165563,
+          "coverage_resolved": 0.6490066225165563,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.6148450729137191,
+              2.2495121666029663
+            ],
+            "wape": [
+              1.4456185471476777,
+              2.014949719519872
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5827814569536424,
+              0.7218543046357616
+            ],
+            "row_bin_coverage": [
+              0.9403973509933775,
+              1.0
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 11.426379853097043,
+          "wape": 11.992041251832108,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 151,
+          "wrong_on_resolved": 44,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.2913907284768212,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              10.847903370246483,
+              12.19646790562806
+            ],
+            "wape": [
+              11.307667237096664,
+              12.67513291936472
+            ],
+            "risk": [
+              0.2117549668874172,
+              0.3509933774834437
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9667218543046359,
+              1.0
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 11.426379853097043,
+          "wape": 11.992041251832108,
+          "row_bin_coverage": 0.9867549668874173,
+          "authority_vector_coverage": 0.9867549668874173,
+          "queries": 151,
+          "resolved_queries": 151,
+          "answers_on_resolved": 42,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.2781456953642384,
+          "coverage_resolved": 0.2781456953642384,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              10.847903370246483,
+              12.19646790562806
+            ],
+            "wape": [
+              11.307667237096664,
+              12.67513291936472
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.19205298013245034,
+              0.3443708609271523
+            ],
+            "row_bin_coverage": [
+              0.9667218543046359,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.8907685869196504,
+            -1.1327774577590668
+          ],
+          "risk": [
+            -0.08625827814569537,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.8907685869196504,
+            -1.1327774577590668
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.020033112582781443,
+            0.09950331125827824
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -1.8285498851161797,
+            -1.0597858886322191
+          ],
+          "risk": [
+            -0.08609271523178808,
+            -0.006622516556291397
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -1.8285498851161797,
+            -1.0597858886322191
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.019701986754966882,
+            0.12599337748344383
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.9426780129665825,
+            -0.2514016259333006
+          ],
+          "risk": [
+            -0.033112582781456956,
+            0.019867549668874177
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.9426780129665825,
+            -0.2514016259333006
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.026490066225165587,
+            0.06622516556291391
+          ]
+        },
+        "lagged_factor:point minus family_factor:point": {
+          "mape": [
+            -1.6121837982770935,
+            -0.652173267636744
+          ],
+          "risk": [
+            -0.09273823160909253,
+            0.006631346578366447
+          ],
+          "coverage_resolved": [
+            -0.019867549668874163,
+            0.0
+          ]
+        },
+        "lagged_factor:guard minus family_factor:guard": {
+          "mape": [
+            -1.6121837982770935,
+            -0.652173267636744
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.039735099337748436,
+            0.17880794701986757
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            7.6584274525887475,
+            9.213319556384885
+          ],
+          "risk": [
+            0.09933774834437087,
+            0.27814569536423844
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            7.6584274525887475,
+            9.213319556384885
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.34453642384105965,
+            -0.2051324503311258
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:geographic:need any point": {
+      "authorities": 153,
+      "methods": {
+        "context_forest:point": {
+          "mape": 1.9673444086262606,
+          "wape": 2.076149426100941,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 2343,
+          "wrong_on_resolved": 31,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.013230900554844216,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.738215499785027,
+              2.184607401002073
+            ],
+            "wape": [
+              1.754259959817636,
+              2.392296919796804
+            ],
+            "risk": [
+              0.0061921332767831344,
+              0.0248595108196747
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 1.9673444086262606,
+          "wape": 2.076149426100941,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 1712,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7300639658848614,
+          "coverage_resolved": 0.7306871532223644,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.738215499785027,
+              2.184607401002073
+            ],
+            "wape": [
+              1.754259959817636,
+              2.392296919796804
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6735742757531749,
+              0.7888221765326311
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 1.9063196965356517,
+          "wape": 1.988163030095555,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 2343,
+          "wrong_on_resolved": 32,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.01365770379854887,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.6496134770732085,
+              2.174160568176106
+            ],
+            "wape": [
+              1.676783586340968,
+              2.343503395537887
+            ],
+            "risk": [
+              0.007194613359427786,
+              0.0244224401501644
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 1.9063196965356517,
+          "wape": 1.988163030095555,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 1662,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7087420042643924,
+          "coverage_resolved": 0.7093469910371318,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.6496134770732085,
+              2.174160568176106
+            ],
+            "wape": [
+              1.676783586340968,
+              2.343503395537887
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6524653423777549,
+              0.7675918154943145
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 2.0571875280208105,
+          "wape": 2.138362516225633,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 2343,
+          "wrong_on_resolved": 33,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.014084507042253521,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8397489855094107,
+              2.3219577046942397
+            ],
+            "wape": [
+              1.7875622940780158,
+              2.5279528367934403
+            ],
+            "risk": [
+              0.00704268474026112,
+              0.024887775408885565
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 2.0571875280208105,
+          "wape": 2.138362516225633,
+          "row_bin_coverage": 0.9934640522875817,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 1705,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7270788912579957,
+          "coverage_resolved": 0.7276995305164319,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8397489855094107,
+              2.3219577046942397
+            ],
+            "wape": [
+              1.7875622940780158,
+              2.5279528367934403
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6761677910267503,
+              0.7815882204810933
+            ],
+            "row_bin_coverage": [
+              0.9803921568627451,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 46.65196746245965,
+          "wape": 3.2093708294014256,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 2325,
+          "wrong_on_resolved": 25,
+          "coverage_all": 0.9923240938166311,
+          "coverage_resolved": 0.9923175416133163,
+          "risk": 0.010752688172043012,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.2218654793337933,
+              135.37988497561474
+            ],
+            "wape": [
+              2.4229794208994377,
+              4.528528985526706
+            ],
+            "risk": [
+              0.004065725703748432,
+              0.020558912036739097
+            ],
+            "coverage_resolved": [
+              0.9838712230575967,
+              0.9978894516549494
+            ],
+            "row_bin_coverage": [
+              0.954248366013072,
+              1.0
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 46.65196746245965,
+          "wape": 3.2093708294014256,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 1188,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5066098081023455,
+          "coverage_resolved": 0.5070422535211268,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.2218654793337933,
+              135.37988497561474
+            ],
+            "wape": [
+              2.4229794208994377,
+              4.528528985526706
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.3813508464971997,
+              0.6178776552994079
+            ],
+            "row_bin_coverage": [
+              0.954248366013072,
+              1.0
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 6.905559264827704,
+          "wape": 7.337868454973397,
+          "row_bin_coverage": 1.0,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 2343,
+          "wrong_on_resolved": 33,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.014084507042253521,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.501651891270302,
+              7.269325153226873
+            ],
+            "wape": [
+              6.778652994906456,
+              7.858493753745367
+            ],
+            "risk": [
+              0.00704268474026112,
+              0.024887775408885565
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 6.905559264827704,
+          "wape": 7.337868454973397,
+          "row_bin_coverage": 1.0,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2343,
+          "answers_on_resolved": 1341,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.5718550106609808,
+          "coverage_resolved": 0.5723431498079385,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              6.501651891270302,
+              7.269325153226873
+            ],
+            "wape": [
+              6.778652994906456,
+              7.858493753745367
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.4983571098775407,
+              0.6391541486036899
+            ],
+            "row_bin_coverage": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -0.22921650079043465,
+            0.041246715974025856
+          ],
+          "risk": [
+            -0.004943987095338747,
+            0.003106145127359722
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -0.22921650079043465,
+            0.041246715974025856
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.018480645536347012,
+            0.02141812825506593
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -0.33726645730377397,
+            0.03497382412823787
+          ],
+          "risk": [
+            -0.004013262990633212,
+            0.003329080153114489
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -0.33726645730377397,
+            0.03497382412823787
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.0444363571062141,
+            0.000898974721340912
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            0.21255621965377985,
+            133.28167245538862
+          ],
+          "risk": [
+            -0.00787022933872045,
+            2.0935021918172025e-05
+          ],
+          "coverage_resolved": [
+            -0.016128776942403382,
+            -0.002110548345050612
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            0.21255621965377985,
+            133.28167245538862
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.34576684175217015,
+            -0.11910166182243274
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            4.477034460927549,
+            5.234355443207322
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            4.477034460927549,
+            5.234355443207322
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.1971031886542798,
+            -0.1204200807975956
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    },
+    "DfE:geographic:referrals": {
+      "authorities": 153,
+      "methods": {
+        "context_forest:point": {
+          "mape": 2.342600197939403,
+          "wape": 3.1242230006940894,
+          "row_bin_coverage": 0.9738562091503268,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 2345,
+          "wrong_on_resolved": 21,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.008955223880597015,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8482145140812003,
+              2.8749799724443097
+            ],
+            "wape": [
+              1.8510224372485986,
+              5.897438822254661
+            ],
+            "risk": [
+              0.0030308831222728484,
+              0.016082521129578746
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9477124183006536,
+              1.0
+            ]
+          }
+        },
+        "context_forest:guard": {
+          "mape": 2.342600197939403,
+          "wape": 3.1242230006940894,
+          "row_bin_coverage": 0.9738562091503268,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 1738,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7411513859275053,
+          "coverage_resolved": 0.7411513859275053,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              1.8482145140812003,
+              2.8749799724443097
+            ],
+            "wape": [
+              1.8510224372485986,
+              5.897438822254661
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6911204485905682,
+              0.7917753077947578
+            ],
+            "row_bin_coverage": [
+              0.9477124183006536,
+              1.0
+            ]
+          }
+        },
+        "context_ridge:point": {
+          "mape": 2.750401156651437,
+          "wape": 3.4429014864774072,
+          "row_bin_coverage": 0.9738562091503268,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 2345,
+          "wrong_on_resolved": 23,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.009808102345415778,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.2599197855888646,
+              3.2601089714495997
+            ],
+            "wape": [
+              2.129340554244743,
+              5.977811707872391
+            ],
+            "risk": [
+              0.0038446173254836,
+              0.017220714961731307
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9477124183006536,
+              0.9934640522875817
+            ]
+          }
+        },
+        "context_ridge:guard": {
+          "mape": 2.750401156651437,
+          "wape": 3.4429014864774072,
+          "row_bin_coverage": 0.9738562091503268,
+          "authority_vector_coverage": 0.9738562091503268,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 1681,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.7168443496801705,
+          "coverage_resolved": 0.7168443496801705,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.2599197855888646,
+              3.2601089714495997
+            ],
+            "wape": [
+              2.129340554244743,
+              5.977811707872391
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.6661988750743155,
+              0.7759088647184577
+            ],
+            "row_bin_coverage": [
+              0.9477124183006536,
+              0.9934640522875817
+            ]
+          }
+        },
+        "family_factor:point": {
+          "mape": 3.127754794058471,
+          "wape": 3.946526615373923,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 2345,
+          "wrong_on_resolved": 22,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.009381663113006396,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.6856486974214984,
+              3.709437732028744
+            ],
+            "wape": [
+              2.519510081015614,
+              7.204988359350139
+            ],
+            "risk": [
+              0.0031076117713638935,
+              0.01607556974170269
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9607843137254902,
+              1.0
+            ]
+          }
+        },
+        "family_factor:guard": {
+          "mape": 3.127754794058471,
+          "wape": 3.946526615373923,
+          "row_bin_coverage": 0.9803921568627451,
+          "authority_vector_coverage": 0.9803921568627451,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 1731,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.7381663113006397,
+          "coverage_resolved": 0.7381663113006397,
+          "risk": 0.0005777007510109763,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.6856486974214984,
+              3.709437732028744
+            ],
+            "wape": [
+              2.519510081015614,
+              7.204988359350139
+            ],
+            "risk": [
+              0.0,
+              0.003454430754419692
+            ],
+            "coverage_resolved": [
+              0.6775510519181875,
+              0.7932864373603223
+            ],
+            "row_bin_coverage": [
+              0.9607843137254902,
+              1.0
+            ]
+          }
+        },
+        "isotonic:point": {
+          "mape": 23.780744958062414,
+          "wape": 4.569394547853729,
+          "row_bin_coverage": 0.9607843137254902,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 2333,
+          "wrong_on_resolved": 20,
+          "coverage_all": 0.9948827292110874,
+          "coverage_resolved": 0.9948827292110874,
+          "risk": 0.008572653236176597,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.487858216302151,
+              65.85955087136864
+            ],
+            "wape": [
+              2.4454084520541413,
+              7.976050682295439
+            ],
+            "risk": [
+              0.002912693536559003,
+              0.015131975531904382
+            ],
+            "coverage_resolved": [
+              0.9875065281626395,
+              0.9984258919064449
+            ],
+            "row_bin_coverage": [
+              0.9215686274509803,
+              0.9869281045751634
+            ]
+          }
+        },
+        "isotonic:guard": {
+          "mape": 23.780744958062414,
+          "wape": 4.569394547853729,
+          "row_bin_coverage": 0.9607843137254902,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 1192,
+          "wrong_on_resolved": 1,
+          "coverage_all": 0.5083155650319829,
+          "coverage_resolved": 0.5083155650319829,
+          "risk": 0.0008389261744966443,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              2.487858216302151,
+              65.85955087136864
+            ],
+            "wape": [
+              2.4454084520541413,
+              7.976050682295439
+            ],
+            "risk": [
+              0.0,
+              0.005348071900739479
+            ],
+            "coverage_resolved": [
+              0.38795788666491343,
+              0.6209664847101458
+            ],
+            "row_bin_coverage": [
+              0.9215686274509803,
+              0.9869281045751634
+            ]
+          }
+        },
+        "literal:point": {
+          "mape": 11.618982254000723,
+          "wape": 13.449478851070085,
+          "row_bin_coverage": 0.9607843137254902,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 2345,
+          "wrong_on_resolved": 22,
+          "coverage_all": 1.0,
+          "coverage_resolved": 1.0,
+          "risk": 0.009381663113006396,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              10.935127443896716,
+              12.346565716914544
+            ],
+            "wape": [
+              11.421995819225177,
+              17.38311827364216
+            ],
+            "risk": [
+              0.0031076117713638935,
+              0.01607556974170269
+            ],
+            "coverage_resolved": [
+              1.0,
+              1.0
+            ],
+            "row_bin_coverage": [
+              0.9281045751633987,
+              0.9869281045751634
+            ]
+          }
+        },
+        "literal:guard": {
+          "mape": 11.618982254000723,
+          "wape": 13.449478851070085,
+          "row_bin_coverage": 0.9607843137254902,
+          "authority_vector_coverage": 0.9607843137254902,
+          "queries": 2345,
+          "resolved_queries": 2345,
+          "answers_on_resolved": 1417,
+          "wrong_on_resolved": 0,
+          "coverage_all": 0.6042643923240938,
+          "coverage_resolved": 0.6042643923240938,
+          "risk": 0.0,
+          "conditional_authority_bootstrap_95": {
+            "mape": [
+              10.935127443896716,
+              12.346565716914544
+            ],
+            "wape": [
+              11.421995819225177,
+              17.38311827364216
+            ],
+            "risk": [
+              0.0,
+              0.0
+            ],
+            "coverage_resolved": [
+              0.5400249975240363,
+              0.6634435126456306
+            ],
+            "row_bin_coverage": [
+              0.9281045751633987,
+              0.9869281045751634
+            ]
+          }
+        }
+      },
+      "paired_contrasts_95": {
+        "context_forest:point minus family_factor:point": {
+          "mape": [
+            -1.106111003575722,
+            -0.40579244848182644
+          ],
+          "risk": [
+            -0.005367716848033565,
+            0.004295564070401481
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest:guard minus family_factor:guard": {
+          "mape": [
+            -1.106111003575722,
+            -0.40579244848182644
+          ],
+          "risk": [
+            -0.0034544307544196917,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.02211245413207517,
+            0.023083090920875085
+          ]
+        },
+        "context_ridge:point minus family_factor:point": {
+          "mape": [
+            -0.7407503766675619,
+            0.13219781253511212
+          ],
+          "risk": [
+            -0.005580912905885278,
+            0.005876827786678007
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_ridge:guard minus family_factor:guard": {
+          "mape": [
+            -0.7407503766675619,
+            0.13219781253511212
+          ],
+          "risk": [
+            -0.0034544307544196917,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.048068566303860444,
+            -0.0015412157186315803
+          ]
+        },
+        "isotonic:point minus family_factor:point": {
+          "mape": [
+            -0.39444880824009004,
+            62.66776824312677
+          ],
+          "risk": [
+            -0.0034766061953722728,
+            5.1929319091117106e-05
+          ],
+          "coverage_resolved": [
+            -0.012493471837360475,
+            -0.0015741080935550637
+          ]
+        },
+        "isotonic:guard minus family_factor:guard": {
+          "mape": [
+            -0.39444880824009004,
+            62.66776824312677
+          ],
+          "risk": [
+            0.0,
+            0.0019502842807517847
+          ],
+          "coverage_resolved": [
+            -0.3645608610749489,
+            -0.1354924596679916
+          ]
+        },
+        "literal:point minus family_factor:point": {
+          "mape": [
+            7.774338779991092,
+            9.16213879465116
+          ],
+          "risk": [
+            0.0,
+            0.0
+          ],
+          "coverage_resolved": [
+            0.0,
+            0.0
+          ]
+        },
+        "literal:guard minus family_factor:guard": {
+          "mape": [
+            7.774338779991092,
+            9.16213879465116
+          ],
+          "risk": [
+            -0.0034544307544196917,
+            0.0
+          ],
+          "coverage_resolved": [
+            -0.1635123564621319,
+            -0.10083124093700431
+          ]
+        }
+      },
+      "reference_control": {
+        "coverage_resolved": 1,
+        "risk": 0,
+        "current_native_values_required": true
+      },
+      "reject_all_control": {
+        "coverage_resolved": 0,
+        "risk": null
+      },
+      "bootstrap_scope": "Conditional on fitted models and fixed folds; authority weights shared by both families and query endpoints"
+    }
+  }
+}

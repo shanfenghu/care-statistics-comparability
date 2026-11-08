@@ -7,7 +7,7 @@ own. These licences govern only this inventory and the described generated outpu
 - Original programs, tests, configuration and software documentation: MIT,
   copyright 2026 Aggregate comparison evaluation contributors. See LICENSE.
 - Original result summaries, predictions and generated displays, including
-  experiments/comparison/config/expected.json and regenerated results/, figures/,
+  experiments/comparison/config/expected.json, selected/ and regenerated results/, figures/,
   tables/ and numeric records/: CC BY 4.0. Credit “Aggregate comparison evaluation contributors”
   and retain the source attribution below. See LICENSES/CC-BY-4.0.txt. Native source
   information in these outputs retains the applicable publisher terms; OGL v3.0

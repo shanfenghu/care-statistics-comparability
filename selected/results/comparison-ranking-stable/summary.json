@@ -1,0 +1,958 @@
+{
+  "config_sha256": "246b00c961904677f88cf6c25f13c08ccff18dfb3ac49a6b0ad57edb5e749ba9",
+  "protocol_sha256": "988544d1460cb720036a42665017c38bd95e95bf95b942bef864bfd7dd9396b5",
+  "script_sha256": "550cd8cfcc0d6208de649d229d2f01bab9ce5980134c9beaa6e448a18160fbd3",
+  "base_config_sha256": "e94358677a379ff534a7b5ada9f98fa469c5dbe0135cf98c3ff36f27fd947923",
+  "reference_config_sha256": "e71218de07b1c3b9105ee8042106f00f4d2ea90c046c14a2349d983a0b7ae079",
+  "reference_summary_sha256": "9681c219323d9bb9ca85f4cacc94a8768f0016670fe3ecb273b3b078b1c944fb",
+  "raw_inputs": [
+    {
+      "path": "data/raw/dhsc/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "sha256": "bb885cdd3d19c4835653d964af8609e6cb37ab8da84b4bf643f74520efe5eec6"
+    },
+    {
+      "path": "data/raw/dfe/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32.csv",
+      "sha256": "e32eb63f8e702084c89e2fc9dbdcd626d1f738817a8656fb04a47bf03d9bbfdc"
+    },
+    {
+      "path": "data/raw/dfe/911dae20-ac5d-4e28-bee8-53a658761fa5.csv",
+      "sha256": "e634961fa6175393c7962aa3bb334cefb8713f5ecb490f6ce219d6a005973ea8"
+    },
+    {
+      "path": "data/raw/dfe/archive-2024-a33b3b51-0b9c-4774-8dc5-767a018c3ba9.csv",
+      "sha256": "ce7b26a15004ba9a244138a37d21abc354cf308f06e5f42e5cb7efa449b5f4cf"
+    },
+    {
+      "path": "data/raw/dfe/archive-2024-306c2a56-228b-43f4-8493-894bee427a8c.csv",
+      "sha256": "622f1ebfb9b6377366b5edc7c65e99b2ae3878f15b2f717a527452b026b25b99"
+    }
+  ],
+  "cases": [
+    {
+      "path": "results/comparison-ranking-stable/DHSC-original-0.json",
+      "sha256": "e1afc5bc7f509556a7383a1b1dad369973f8243e4a66bf18c2076c8fcf006e97"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-original-1.json",
+      "sha256": "aa8be4ecf160d8ddd88c3f85966be347fd823e9c0392eee50248c4b5760668fb"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-original-2.json",
+      "sha256": "bc214801506b4e3ab6d681c892c684e9a483a98d767cca9712cdb3f2d8c54804"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-original-3.json",
+      "sha256": "b17b4b003c82ee0ff0ae713335c9cc4ab1740de815b4fe4c26f87afc6fb73ad0"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-original-4.json",
+      "sha256": "ecd96a4cd41d962e5e288657df7f32ec41567035df4ef7fa4cb03afe7b79089c"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261104-0.json",
+      "sha256": "a8f54d12814052af5dc4f4e34ec3aafc0486c9a7273ac399bd4e74e3347ff738"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261104-1.json",
+      "sha256": "84a25368af1b0f90ff51b1e66ac3b19abe187173220d04a24d8a11a4a0dcd1a5"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261104-2.json",
+      "sha256": "f7bdca1b6420d45fd0dae102b7dcd1d64518ebb4ef61a2047cf9613281fb990a"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261104-3.json",
+      "sha256": "2541b9837f633be4d63786c71be540f5c64f56335c60a1800aa354183abfdbcc"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261104-4.json",
+      "sha256": "0a6899a78e8d62478a2594414d6485d2802742eb0e844e59b31449eced4e0895"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261105-0.json",
+      "sha256": "85d7aed2146ab8eb6891a0f952ee96007418a439569c09b82f3e32b6a5b84383"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261105-1.json",
+      "sha256": "c9d3520243ea1fb50e822c10b8d15cd5abef34685951d2454c625d84d4a5309a"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261105-2.json",
+      "sha256": "f7b9f34060cb8b82ce40fb0915404fd46beca8c7b6e77b9e63c6042535a3cf17"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261105-3.json",
+      "sha256": "dafdb7dd6b4000dff3eee302fbad36836910ffb864c66f45c2d52746be47663e"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DHSC-salt-20261105-4.json",
+      "sha256": "2edffd4af1703cd35ddedf0a09166ee393eaef10c0b09fbaf04ac49de8173293"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-original-0.json",
+      "sha256": "4c1e6109055ae8100a8055127eb99fd5d57c3b2fa8a1bcbb716cc893f9a80345"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-original-1.json",
+      "sha256": "b68bfb7b28eb66954622aef4ae263e2f69c67dd1b287976f6932c541b459c9ff"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-original-2.json",
+      "sha256": "df68a0a99e92e9ccb86f200340452bb7d5e3dea9400692afba7d3bce73ebda99"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-original-3.json",
+      "sha256": "d27c31737dffd868e44a0351f835f522032aac6bf798b71aa35e0a1d418c0531"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-original-4.json",
+      "sha256": "e0a5b04977b46b69e5a201ce143a2e9941bd9baa1a0a383528460561505ab705"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261104-0.json",
+      "sha256": "ff9ffd0a4277286936e09a5823c4ecb46928a2edf1b6e0482768fbf3ea08a228"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261104-1.json",
+      "sha256": "80d75e88f56a978482af414dfd08b9f057cd675056c53d4dc5029f8b6a58e258"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261104-2.json",
+      "sha256": "cadb9ff1baff29d1a548bb753afcfb177b0bd83adfa54a1f25cd79d554595e14"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261104-3.json",
+      "sha256": "1d73b7a41f09ffba4cf17aa1cc76c31750532eca42d5e2526e4960cab5914ab4"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261104-4.json",
+      "sha256": "8214ec634705aa66ed4abbf9b133a6d8c9fd5542a05dd8c720f8e97af3816992"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261105-0.json",
+      "sha256": "f3c10bd075573d7250f0e553afe59c8f008b2d4fee73b84f06971a41588dea8e"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261105-1.json",
+      "sha256": "7323835c2333df292cf1b8c1f1f09635f042a8ebf27f0fbee9fceff4cfd8b2ec"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261105-2.json",
+      "sha256": "34660417635749d3e49a1567792076ce611dcdb6dfa6db481ce3f54f19a0acac"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261105-3.json",
+      "sha256": "bc5242f208aab25cefc90149aa9966cebb8b373d0d6ec395692d99da8480ecde"
+    },
+    {
+      "path": "results/comparison-ranking-stable/DfE-salt-20261105-4.json",
+      "sha256": "4230b2f646c503df8f1be58eacaf6d01e1de17ab94d237d5fa42bbf53be8e291"
+    }
+  ],
+  "summaries": {
+    "DHSC:original": {
+      "authorities": 152,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 4640,
+            "answered": 4637,
+            "wrong": 199,
+            "coverage": 0.9987077320697825,
+            "coverage_all": 0.9987085665088248,
+            "risk": 0.042915678240241534
+          },
+          "budget": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 3482,
+            "answered": 3482,
+            "wrong": 6,
+            "coverage": 0.7499461555029076,
+            "coverage_all": 0.7494619027120103,
+            "risk": 0.0017231476163124641
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 4646,
+            "answered": 4643,
+            "wrong": 224,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.04824466939478785
+          },
+          "budget": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 3482,
+            "answered": 3482,
+            "wrong": 7,
+            "coverage": 0.7499461555029076,
+            "coverage_all": 0.7494619027120103,
+            "risk": 0.002010338885697875
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 4646,
+            "answered": 4643,
+            "wrong": 207,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.044583243592504845
+          },
+          "budget": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 3482,
+            "answered": 3482,
+            "wrong": 6,
+            "coverage": 0.7499461555029076,
+            "coverage_all": 0.7494619027120103,
+            "risk": 0.0017231476163124641
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 4646,
+            "answered": 4643,
+            "wrong": 222,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.04781391341804868
+          },
+          "budget": {
+            "queries": 4646,
+            "resolved": 4643,
+            "answered_all": 3482,
+            "answered": 3482,
+            "wrong": 7,
+            "coverage": 0.7499461555029076,
+            "coverage_all": 0.7494619027120103,
+            "risk": 0.002010338885697875
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            -0.1774999196726053,
+            1.1203455049167044
+          ],
+          "budget": [
+            -0.1987519119494487,
+            0.2717833390699807
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.3489852024444146,
+            0.6577457635547086
+          ],
+          "budget": [
+            -0.14631036888631316,
+            0.12164323445084128
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.22003092662230625,
+            1.259376091787677
+          ],
+          "budget": [
+            -0.19645895656277665,
+            0.32631293406078227
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4637,
+        "repair": 30,
+        "damage": 50,
+        "both_wrong": 169,
+        "ties": 6
+      }
+    },
+    "DHSC:salt-20261104": {
+      "authorities": 152,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 4744,
+            "answered": 4743,
+            "wrong": 193,
+            "coverage": 0.9995785036880928,
+            "coverage_all": 0.9995785924989464,
+            "risk": 0.04069154543537845
+          },
+          "budget": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 3556,
+            "answered": 3556,
+            "wrong": 6,
+            "coverage": 0.7494204425711275,
+            "coverage_all": 0.7492625368731564,
+            "risk": 0.001687289088863892
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 4746,
+            "answered": 4745,
+            "wrong": 217,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.045732349841938885
+          },
+          "budget": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 3556,
+            "answered": 3556,
+            "wrong": 5,
+            "coverage": 0.7494204425711275,
+            "coverage_all": 0.7492625368731564,
+            "risk": 0.00140607424071991
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 4746,
+            "answered": 4745,
+            "wrong": 189,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.039831401475237095
+          },
+          "budget": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 3556,
+            "answered": 3556,
+            "wrong": 6,
+            "coverage": 0.7494204425711275,
+            "coverage_all": 0.7492625368731564,
+            "risk": 0.001687289088863892
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 4746,
+            "answered": 4745,
+            "wrong": 221,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.04657534246575343
+          },
+          "budget": {
+            "queries": 4746,
+            "resolved": 4745,
+            "answered_all": 3556,
+            "answered": 3556,
+            "wrong": 7,
+            "coverage": 0.7494204425711275,
+            "coverage_all": 0.7492625368731564,
+            "risk": 0.001968503937007874
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            0.0393676988355448,
+            1.1747621025914383
+          ],
+          "budget": [
+            -0.20215851419239544,
+            0.14662998795762433
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.580093526840449,
+            0.3600418764457193
+          ],
+          "budget": [
+            -0.1459787521997868,
+            0.14798754011502557
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.04604766268128702,
+            1.2888740624684545
+          ],
+          "budget": [
+            -0.2116654564809673,
+            0.24931734623788354
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4743,
+        "repair": 31,
+        "damage": 57,
+        "both_wrong": 162,
+        "ties": 2
+      }
+    },
+    "DHSC:salt-20261105": {
+      "authorities": 152,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 4751,
+            "answered": 4750,
+            "wrong": 226,
+            "coverage": 0.9993688196928255,
+            "coverage_all": 0.9993689524610854,
+            "risk": 0.047578947368421054
+          },
+          "budget": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 3562,
+            "answered": 3562,
+            "wrong": 9,
+            "coverage": 0.7494214180517568,
+            "coverage_all": 0.7492637778712663,
+            "risk": 0.0025266704098820887
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 4754,
+            "answered": 4753,
+            "wrong": 246,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.051756785188302123
+          },
+          "budget": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 3562,
+            "answered": 3562,
+            "wrong": 13,
+            "coverage": 0.7494214180517568,
+            "coverage_all": 0.7492637778712663,
+            "risk": 0.0036496350364963502
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 4754,
+            "answered": 4753,
+            "wrong": 227,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.047759309909530825
+          },
+          "budget": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 3562,
+            "answered": 3562,
+            "wrong": 10,
+            "coverage": 0.7494214180517568,
+            "coverage_all": 0.7492637778712663,
+            "risk": 0.002807411566535654
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 4754,
+            "answered": 4753,
+            "wrong": 257,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.05407111298127498
+          },
+          "budget": {
+            "queries": 4754,
+            "resolved": 4753,
+            "answered_all": 3562,
+            "answered": 3562,
+            "wrong": 13,
+            "coverage": 0.7494214180517568,
+            "coverage_all": 0.7492637778712663,
+            "risk": 0.0036496350364963502
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            -0.3163119769967721,
+            1.1357538451720464
+          ],
+          "budget": [
+            -0.0013015502993793285,
+            0.34702017086050585
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.4541985868852163,
+            0.4728442023411376
+          ],
+          "budget": [
+            -0.14829364536741343,
+            0.18710102652890453
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.022948028644016114,
+            1.413530051490734
+          ],
+          "budget": [
+            -0.08875626414543587,
+            0.42722920161645356
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4750,
+        "repair": 37,
+        "damage": 66,
+        "both_wrong": 189,
+        "ties": 3
+      }
+    },
+    "DfE:original": {
+      "authorities": 153,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 4690,
+            "answered": 4688,
+            "wrong": 55,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.011732081911262798
+          },
+          "budget": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 3514,
+            "answered": 3514,
+            "wrong": 0,
+            "coverage": 0.7495733788395904,
+            "coverage_all": 0.7492537313432835,
+            "risk": 0.0
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 4690,
+            "answered": 4688,
+            "wrong": 55,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.011732081911262798
+          },
+          "budget": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 3514,
+            "answered": 3514,
+            "wrong": 0,
+            "coverage": 0.7495733788395904,
+            "coverage_all": 0.7492537313432835,
+            "risk": 0.0
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 4690,
+            "answered": 4688,
+            "wrong": 52,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.011092150170648464
+          },
+          "budget": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 3514,
+            "answered": 3514,
+            "wrong": 0,
+            "coverage": 0.7495733788395904,
+            "coverage_all": 0.7492537313432835,
+            "risk": 0.0
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 4690,
+            "answered": 4688,
+            "wrong": 52,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.011092150170648464
+          },
+          "budget": {
+            "queries": 4690,
+            "resolved": 4688,
+            "answered_all": 3514,
+            "answered": 3514,
+            "wrong": 0,
+            "coverage": 0.7495733788395904,
+            "coverage_all": 0.7492537313432835,
+            "risk": 0.0
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            -0.32560194255946184,
+            0.24595107467789612
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.43064245805851487,
+            0.23696461074249664
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.550881011627546,
+            0.4323720440329812
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4688,
+        "repair": 20,
+        "damage": 17,
+        "both_wrong": 35,
+        "ties": 0
+      }
+    },
+    "DfE:salt-20261104": {
+      "authorities": 153,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 4817,
+            "answered": 4816,
+            "wrong": 74,
+            "coverage": 0.9997924019099025,
+            "coverage_all": 0.9997924449979244,
+            "risk": 0.015365448504983389
+          },
+          "budget": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 3610,
+            "answered": 3610,
+            "wrong": 1,
+            "coverage": 0.7494291052522317,
+            "coverage_all": 0.7492735574927356,
+            "risk": 0.0002770083102493075
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 4818,
+            "answered": 4817,
+            "wrong": 77,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.015985052937512977
+          },
+          "budget": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 3610,
+            "answered": 3610,
+            "wrong": 0,
+            "coverage": 0.7494291052522317,
+            "coverage_all": 0.7492735574927356,
+            "risk": 0.0
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 4818,
+            "answered": 4817,
+            "wrong": 68,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.014116670126634834
+          },
+          "budget": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 3610,
+            "answered": 3610,
+            "wrong": 0,
+            "coverage": 0.7494291052522317,
+            "coverage_all": 0.7492735574927356,
+            "risk": 0.0
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 4818,
+            "answered": 4817,
+            "wrong": 82,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.01702304338800083
+          },
+          "budget": {
+            "queries": 4818,
+            "resolved": 4817,
+            "answered_all": 3610,
+            "answered": 3610,
+            "wrong": 0,
+            "coverage": 0.7494291052522317,
+            "coverage_all": 0.7492735574927356,
+            "risk": 0.0
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            -0.3487045559829637,
+            0.43435790114386064
+          ],
+          "budget": [
+            -0.16806932883865727,
+            0.0
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.4164378135834076,
+            0.19962291060325338
+          ],
+          "budget": [
+            -0.16806932883865727,
+            0.0
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.3432372468893431,
+            0.7443357232657674
+          ],
+          "budget": [
+            -0.16806932883865727,
+            0.0
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4816,
+        "repair": 24,
+        "damage": 32,
+        "both_wrong": 50,
+        "ties": 1
+      }
+    },
+    "DfE:salt-20261105": {
+      "authorities": 153,
+      "methods": {
+        "family_factor": {
+          "point": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 4791,
+            "answered": 4789,
+            "wrong": 69,
+            "coverage": 0.9997912317327766,
+            "coverage_all": 0.9997913188647746,
+            "risk": 0.014408018375443725
+          },
+          "budget": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 3590,
+            "answered": 3590,
+            "wrong": 0,
+            "coverage": 0.7494780793319415,
+            "coverage_all": 0.7491652754590985,
+            "risk": 0.0
+          }
+        },
+        "context_ridge": {
+          "point": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 4792,
+            "answered": 4790,
+            "wrong": 78,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.0162839248434238
+          },
+          "budget": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 3590,
+            "answered": 3590,
+            "wrong": 0,
+            "coverage": 0.7494780793319415,
+            "coverage_all": 0.7491652754590985,
+            "risk": 0.0
+          }
+        },
+        "context_forest": {
+          "point": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 4792,
+            "answered": 4790,
+            "wrong": 71,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.014822546972860125
+          },
+          "budget": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 3590,
+            "answered": 3590,
+            "wrong": 0,
+            "coverage": 0.7494780793319415,
+            "coverage_all": 0.7491652754590985,
+            "risk": 0.0
+          }
+        },
+        "pairwise_logistic": {
+          "point": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 4792,
+            "answered": 4790,
+            "wrong": 79,
+            "coverage": 1.0,
+            "coverage_all": 1.0,
+            "risk": 0.01649269311064718
+          },
+          "budget": {
+            "queries": 4792,
+            "resolved": 4790,
+            "answered_all": 3590,
+            "answered": 3590,
+            "wrong": 0,
+            "coverage": 0.7494780793319415,
+            "coverage_all": 0.7491652754590985,
+            "risk": 0.0
+          }
+        }
+      },
+      "paired_risk_difference_95_pp": {
+        "context_ridge": {
+          "point": [
+            -0.21569307835836468,
+            0.6014781595134056
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        },
+        "context_forest": {
+          "point": [
+            -0.3659286625351068,
+            0.408924711785477
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        },
+        "pairwise_logistic": {
+          "point": [
+            -0.3628755180484873,
+            0.6964099232699029
+          ],
+          "budget": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "ranking_factor_transitions": {
+        "common": 4789,
+        "repair": 24,
+        "damage": 34,
+        "both_wrong": 45,
+        "ties": 1
+      }
+    }
+  },
+  "selected_penalties": {
+    "0.0001": 31,
+    "0.01": 1,
+    "0.001": 28
+  },
+  "environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "sklearn": "1.6.1"
+  },
+  "scope": "Reused development sources; new prespecified reference, no fresh-source confirmation; conditional fixed-fit authority bootstrap and descriptive refitted partitions"
+}

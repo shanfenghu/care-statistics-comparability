@@ -1,0 +1,1338 @@
+{
+  "status": "passed",
+  "analysis": "Development-selected fixed-record mechanism diagnostics; no refitting or independent confirmation",
+  "script_sha256": "a7cc7e68925aac869c6168adda12dfec673cc029f6471f1d395f6ed8fcfdd9e9",
+  "protocol_sha256": "6d7ecc508d6a9d3fb01d2a58975c4aba68ce71e64c1441ee1b1172b7231b1372",
+  "source_summary_sha256": "9681c219323d9bb9ca85f4cacc94a8768f0016670fe3ecb273b3b078b1c944fb",
+  "cases": [
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-original-0.json",
+      "sha256": "4cc5b697c44488e8f612f0767b7aa23a897475d965403a19b35a694c3e2cc218",
+      "input_path": "results/comparison-robustness/DHSC-original-0.json",
+      "input_sha256": "ad7c83c38bf75ce2d7cb69663f4285f3ee0899bc750aa3b31a91f871989c37ba"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-original-1.json",
+      "sha256": "abdb541e970e07ea8f8845bef6e12abaa8492e95a867640212d023929a177688",
+      "input_path": "results/comparison-robustness/DHSC-original-1.json",
+      "input_sha256": "21de21faa0d0d0847dbe24db3dfcfdeb115052b78c2e2756df912d0e9af475a3"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-original-2.json",
+      "sha256": "d2c701933e319c573c0c34b587e6b82cac8c6979156831849b23e357c036c108",
+      "input_path": "results/comparison-robustness/DHSC-original-2.json",
+      "input_sha256": "d6d910453c5106ea8e29f5d019533075f02eca9886ca5585edfefdad6dc93395"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-original-3.json",
+      "sha256": "8d300c984c9a017b4581edae6be63eb7953b17d9898eb4d1f3804de870b4f16b",
+      "input_path": "results/comparison-robustness/DHSC-original-3.json",
+      "input_sha256": "dc67a81c35998af99bf1ff13f7825f1440b49da1b764c07a2885b6a399918a5a"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-original-4.json",
+      "sha256": "d356ec5f59dbf5a91b812d9765810c63b95dbdecef355bc7aa98ad22978192fa",
+      "input_path": "results/comparison-robustness/DHSC-original-4.json",
+      "input_sha256": "d47f221daeca9340a69ff22f5d2f63c0b2e320bf33f351ccae07c1b3d1b601b0"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261104-0.json",
+      "sha256": "29b4a90a8c99a48bc503c01e7e0153bfad1c7bb9f5e736cd0c73710faf873401",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261104-0.json",
+      "input_sha256": "9f53c3090a93a31343bfb4a6c4b2aa5a1efe669baa94d0ad0975a340c13e97e4"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261104-1.json",
+      "sha256": "e8806c593ffaeaba78c819c1ee6f708413534523a822c0f8ee288bce6913a92f",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261104-1.json",
+      "input_sha256": "f5ea158ebf4d656c54bb49156075ffe3916d5cc72d8e1edce25461cb9c74b1de"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261104-2.json",
+      "sha256": "eb957ad72b6a67fb15704cba8c8221a4a6958653871869f92ebe4e4c65633e4d",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261104-2.json",
+      "input_sha256": "ef40a6b224e9a78aaa5abe97e9e8701cbda257f1b2cc0b83d57a74c04bbe8648"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261104-3.json",
+      "sha256": "da99145a6d09c7c5a3d7765e0018d8f5ff4c4e409ff89a74c42b581980dfa2da",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261104-3.json",
+      "input_sha256": "b39e4adfbee665afe99660a47e3b983a61747c53a3e1d0572ed778b59a543e67"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261104-4.json",
+      "sha256": "62dd788c6bfe01e3b36d2a9a0ca000bf01f4cd796c7bc6601fd1dfd7aec5f83d",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261104-4.json",
+      "input_sha256": "12263af33c5e2b29a63ff7c375ad25943feb9d5b0fa7c225163e5c1733a3bd8d"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261105-0.json",
+      "sha256": "ee6ae7f649297d097deac4907d254bb5a3d07205e028d6e4caa52fe6136a1bf8",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261105-0.json",
+      "input_sha256": "e791be01e53b15801eabc1a31c96e0b49a367a88822ab322dbb4c304aa8f3ad8"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261105-1.json",
+      "sha256": "8f11ad9da78c190cdfcb40d744a129ed57dd67fe87ee921831d491ea7d159c6f",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261105-1.json",
+      "input_sha256": "9c6b31d0fd013c33f6afa64ba289f03202f2841ce7afb41164c6802389436499"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261105-2.json",
+      "sha256": "d923bb943005485e172c951fad3a8f21b056f7199422cb2d6a6af0e68e7ddc75",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261105-2.json",
+      "input_sha256": "fbc5d43052ecaa00ec220785633e41e95c619f32bcf5628cbbd5cd9edb90616e"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261105-3.json",
+      "sha256": "bc572d5bc4d30af401e86c170c0d31d0630cc8d9404a1c0d1766eaf1a7df7b40",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261105-3.json",
+      "input_sha256": "f55ecbe78db5742938d7421037e58ddc5c18abfa98885562131d60548ad81013"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DHSC-salt-20261105-4.json",
+      "sha256": "81673b7df39afc68ed9f96b11ce3f0ac4ac5e5c62eaa2e4fb2199ab99ddfbb20",
+      "input_path": "results/comparison-robustness/DHSC-salt-20261105-4.json",
+      "input_sha256": "c05fd1bf4c34e43c1debfd7c77c1560c00505905373a4480d6839f26d07d2b86"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-original-0.json",
+      "sha256": "10e7f73bf315ad1d159481f443fe9f27ce1172807c3a0ff49235f9481c62b14e",
+      "input_path": "results/comparison-robustness/DfE-original-0.json",
+      "input_sha256": "5d6708e664a9939cc0fc55a10f54ccce9ebdeb712e734c3053128d63b1d776a9"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-original-1.json",
+      "sha256": "c269edba37162b260f0f6ff268be635b1cc761d0d10e0dfe61506a51ec50eea0",
+      "input_path": "results/comparison-robustness/DfE-original-1.json",
+      "input_sha256": "e975d922c32bf8dfafab5b2730186b180b9b553e33264268df68bd7b5bafc46c"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-original-2.json",
+      "sha256": "6e866d885318ae88b1b424e2f1f471e5c243971830813c6fea9b8094dfc2657f",
+      "input_path": "results/comparison-robustness/DfE-original-2.json",
+      "input_sha256": "f527cbd0a6af594dda067be40662ae220506db1e37023356eea392f114c81e01"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-original-3.json",
+      "sha256": "2d8b91697043d6ab86101caa1104a260bd7a8d196938640b5b70fad560c15776",
+      "input_path": "results/comparison-robustness/DfE-original-3.json",
+      "input_sha256": "0cb7c19c6f754fdb09c637fd836023d810387420927a37ecac8d80997c266009"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-original-4.json",
+      "sha256": "4f1411e020a5b17ab0e9a917b365ba732ab38ed87a50d77a2c5f7d9a13f80160",
+      "input_path": "results/comparison-robustness/DfE-original-4.json",
+      "input_sha256": "2377fc4d9553179913e54002ee1a75c38bf5bb9f8a25a424e8b2958ae7c483d1"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261104-0.json",
+      "sha256": "63f0feb2991774fc9eeb117cb768721d33e88c31dd1e035eff227360353873e8",
+      "input_path": "results/comparison-robustness/DfE-salt-20261104-0.json",
+      "input_sha256": "19efa59b74d2aa97047db242f125837f51fb8b759391cbcddd0ea7e6a5bfe0b6"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261104-1.json",
+      "sha256": "2e0a98061284e730a214fa535a47b938c1b0adf1e7da0624d98aedb71b0d4733",
+      "input_path": "results/comparison-robustness/DfE-salt-20261104-1.json",
+      "input_sha256": "4e8f17b769595e58014d22552190a35f51b5e558c065e0119acc338cd2a13206"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261104-2.json",
+      "sha256": "b9744d7e9dfb222e61b8da6bd76f8ec0489e404a8ab52aea9cb9835ac0a74484",
+      "input_path": "results/comparison-robustness/DfE-salt-20261104-2.json",
+      "input_sha256": "a5b3828bd394301ffb3b55795756835afbac454f63d8f32133a6000df10ecfbe"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261104-3.json",
+      "sha256": "d2f60f54506e725709cacf2a19713702a00247929751a4e92c8e1e927f5ace38",
+      "input_path": "results/comparison-robustness/DfE-salt-20261104-3.json",
+      "input_sha256": "ee95764f9c28163bdad8757cef0d3ceb32e52a5d96fe69ad7aebb73b7d611566"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261104-4.json",
+      "sha256": "459e799bbd79a932a03fbcc8291d5b319c3d7f90a6a9ba1fca8bd18b41bbc4f6",
+      "input_path": "results/comparison-robustness/DfE-salt-20261104-4.json",
+      "input_sha256": "83aebde3fa1ee93ef3068e81052cf36e8724f8fbce903371de62a3f95d4216fb"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261105-0.json",
+      "sha256": "73806db48945e824474ee5b7d1b58ce7957640d2cfa042815c11142f8bfe1fcb",
+      "input_path": "results/comparison-robustness/DfE-salt-20261105-0.json",
+      "input_sha256": "8c0785371ae3f24b002a96cf7c2c83b51bfd6f6c9ad97ec1aa1cc783d071703e"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261105-1.json",
+      "sha256": "acc91be006c7e3e3376e8afa4c6247b3ff91378002a13b3aa896da720719f462",
+      "input_path": "results/comparison-robustness/DfE-salt-20261105-1.json",
+      "input_sha256": "3b68f9f59c3e834f5a0906f841d2bedb6b6dc975b3046cb3a8464328a141dfc1"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261105-2.json",
+      "sha256": "1f6bcf0de5506be8fe853013ffc140eaca315a139430b21cdf2b2c9c7a74c02f",
+      "input_path": "results/comparison-robustness/DfE-salt-20261105-2.json",
+      "input_sha256": "29d3b84ec630f35f239739391bb0c14de970bf667ece24fac485c14dfb12528c"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261105-3.json",
+      "sha256": "73e66b1eba5c95cd4c0cdf0b523b2a0e4935dd03d71d38510c695971f0f52898",
+      "input_path": "results/comparison-robustness/DfE-salt-20261105-3.json",
+      "input_sha256": "8c4ec63a4268a71d0575963dd09b9f6b58b05a954e62c87f4c633f0c5b172da1"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-salt-20261105-4.json",
+      "sha256": "6d8467e7652784b5b95d309243ad8cbdf6c580f65772593306c66d8add5cfb89",
+      "input_path": "results/comparison-robustness/DfE-salt-20261105-4.json",
+      "input_sha256": "0214513db4551e8b8fd87ccf98c42c38d4238ba3d64baa2b71809b477a3570fb"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-current-2020.json",
+      "sha256": "95d1226618090fc8a1c1b1bdde7edcf8541c2a20843ed7978ae2682e8c991dc7",
+      "input_path": "results/comparison-robustness/DfE-current-2020.json",
+      "input_sha256": "86fbc50366a1fa31781f91824baa5ac3eb40b1efe1ae91ad27754648cb9905f3"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-current-2023.json",
+      "sha256": "e9d3b6e3b2c371b36228fac66945c514cd511d09cfdc32de98dee5c381e20bd4",
+      "input_path": "results/comparison-robustness/DfE-current-2023.json",
+      "input_sha256": "8d6dcacc232018d8580735ecaa55e523dd3186f910a2a5c992c385a105b9d145"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-current-2025.json",
+      "sha256": "b5b95f0cec6702d4b2a0da4e24a31a6c3dc4f706687341435735d856767fc4d4",
+      "input_path": "results/comparison-robustness/DfE-current-2025.json",
+      "input_sha256": "338738fc870f125161101f40bc712259099c009a87b8b2ebe5b6eac39a3172fd"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-preceding-release-2025.json",
+      "sha256": "9106cbd4acc35d7a77f7c032212f2ed21bb3b09d876f0457e7ae1953da8f99ed",
+      "input_path": "results/comparison-robustness/DfE-preceding-release-2025.json",
+      "input_sha256": "b90a9a1e559e2a790b1550e0596fd4fda6779902379e234c6c384f299c1aeeb5"
+    },
+    {
+      "path": "results/comparison-mechanism/cases/DfE-matched-current-2025.json",
+      "sha256": "73328be5cf85c7eb421ba24ce0c82f436bcbe2543628733481e05cd20160b951",
+      "input_path": "results/comparison-robustness/DfE-matched-current-2025.json",
+      "input_sha256": "97d3f6d0724ee851205c78e7e92cad5b3f06e044ed592392d99acf80c9800995"
+    }
+  ],
+  "groups": {
+    "DHSC:original": {
+      "queries": 4646,
+      "resolved": 4643,
+      "transitions": {
+        "both_correct": 4415,
+        "repair": 17,
+        "damage": 23,
+        "both_wrong": 182,
+        "point_tie": 6,
+        "unresolved": 3
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 175,
+            "baseline_ties": 6,
+            "baseline_errors": 70,
+            "forest_errors": 77
+          },
+          "outside": {
+            "queries": 4468,
+            "baseline_ties": 0,
+            "baseline_errors": 129,
+            "forest_errors": 130
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 327,
+            "baseline_ties": 6,
+            "baseline_errors": 121,
+            "forest_errors": 129
+          },
+          "outside": {
+            "queries": 4316,
+            "baseline_ties": 0,
+            "baseline_errors": 78,
+            "forest_errors": 78
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 786,
+            "baseline_ties": 6,
+            "baseline_errors": 179,
+            "forest_errors": 187
+          },
+          "outside": {
+            "queries": 3857,
+            "baseline_ties": 0,
+            "baseline_errors": 20,
+            "forest_errors": 20
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4643,
+          "answered": 2762,
+          "wrong": 0
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4643,
+          "answered": 2917,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4643,
+          "answered": 2629,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4643,
+          "answered": 2803,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DHSC-original-0": {
+          "family_factor": 0.16900648727681364,
+          "context_forest": 0.13433185210908713
+        },
+        "DHSC-original-1": {
+          "family_factor": 0.3469895041777912,
+          "context_forest": 0.24859151171395552
+        },
+        "DHSC-original-2": {
+          "family_factor": 0.1542796808752091,
+          "context_forest": 0.16572099207437638
+        },
+        "DHSC-original-3": {
+          "family_factor": 0.2006123883447764,
+          "context_forest": 0.18504192818632134
+        },
+        "DHSC-original-4": {
+          "family_factor": 0.1605894865665257,
+          "context_forest": 0.15777882604998417
+        }
+      }
+    },
+    "DHSC:salt-20261104": {
+      "queries": 4746,
+      "resolved": 4745,
+      "transitions": {
+        "both_correct": 4533,
+        "repair": 21,
+        "damage": 17,
+        "both_wrong": 172,
+        "point_tie": 2,
+        "unresolved": 1
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 180,
+            "baseline_ties": 2,
+            "baseline_errors": 66,
+            "forest_errors": 65
+          },
+          "outside": {
+            "queries": 4565,
+            "baseline_ties": 0,
+            "baseline_errors": 127,
+            "forest_errors": 124
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 347,
+            "baseline_ties": 2,
+            "baseline_errors": 115,
+            "forest_errors": 111
+          },
+          "outside": {
+            "queries": 4398,
+            "baseline_ties": 0,
+            "baseline_errors": 78,
+            "forest_errors": 78
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 816,
+            "baseline_ties": 2,
+            "baseline_errors": 176,
+            "forest_errors": 172
+          },
+          "outside": {
+            "queries": 3929,
+            "baseline_ties": 0,
+            "baseline_errors": 17,
+            "forest_errors": 17
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4745,
+          "answered": 2417,
+          "wrong": 0
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4745,
+          "answered": 2617,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4745,
+          "answered": 2311,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4745,
+          "answered": 2478,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DHSC-salt-20261104-0": {
+          "family_factor": 0.19652028700751056,
+          "context_forest": 0.21769851991148534
+        },
+        "DHSC-salt-20261104-1": {
+          "family_factor": 0.19218186277215946,
+          "context_forest": 0.18345627315518
+        },
+        "DHSC-salt-20261104-2": {
+          "family_factor": 0.2075942522908484,
+          "context_forest": 0.19340995020370932
+        },
+        "DHSC-salt-20261104-3": {
+          "family_factor": 0.3346516069187537,
+          "context_forest": 0.25152016459312504
+        },
+        "DHSC-salt-20261104-4": {
+          "family_factor": 0.20234701464587487,
+          "context_forest": 0.17986444789053288
+        }
+      }
+    },
+    "DHSC:salt-20261105": {
+      "queries": 4754,
+      "resolved": 4753,
+      "transitions": {
+        "both_correct": 4502,
+        "repair": 21,
+        "damage": 22,
+        "both_wrong": 205,
+        "point_tie": 3,
+        "unresolved": 1
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 176,
+            "baseline_ties": 3,
+            "baseline_errors": 73,
+            "forest_errors": 74
+          },
+          "outside": {
+            "queries": 4577,
+            "baseline_ties": 0,
+            "baseline_errors": 153,
+            "forest_errors": 153
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 355,
+            "baseline_ties": 3,
+            "baseline_errors": 130,
+            "forest_errors": 129
+          },
+          "outside": {
+            "queries": 4398,
+            "baseline_ties": 0,
+            "baseline_errors": 96,
+            "forest_errors": 98
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 828,
+            "baseline_ties": 3,
+            "baseline_errors": 207,
+            "forest_errors": 208
+          },
+          "outside": {
+            "queries": 3925,
+            "baseline_ties": 0,
+            "baseline_errors": 19,
+            "forest_errors": 19
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4753,
+          "answered": 2664,
+          "wrong": 0
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4753,
+          "answered": 2807,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4753,
+          "answered": 2560,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4753,
+          "answered": 2701,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DHSC-salt-20261105-0": {
+          "family_factor": 0.18186200549448028,
+          "context_forest": 0.1857473208753931
+        },
+        "DHSC-salt-20261105-1": {
+          "family_factor": 0.2112550317794156,
+          "context_forest": 0.15746724728153103
+        },
+        "DHSC-salt-20261105-2": {
+          "family_factor": 0.34798189625159565,
+          "context_forest": 0.23317869464325214
+        },
+        "DHSC-salt-20261105-3": {
+          "family_factor": 0.21057810032452556,
+          "context_forest": 0.22155697441157643
+        },
+        "DHSC-salt-20261105-4": {
+          "family_factor": 0.168030766441563,
+          "context_forest": 0.1540998620510109
+        }
+      }
+    },
+    "DfE:original": {
+      "queries": 4690,
+      "resolved": 4688,
+      "transitions": {
+        "both_correct": 4625,
+        "repair": 11,
+        "damage": 8,
+        "both_wrong": 44,
+        "point_tie": 0,
+        "unresolved": 2
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 230,
+            "baseline_ties": 0,
+            "baseline_errors": 49,
+            "forest_errors": 46
+          },
+          "outside": {
+            "queries": 4458,
+            "baseline_ties": 0,
+            "baseline_errors": 6,
+            "forest_errors": 6
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 481,
+            "baseline_ties": 0,
+            "baseline_errors": 54,
+            "forest_errors": 51
+          },
+          "outside": {
+            "queries": 4207,
+            "baseline_ties": 0,
+            "baseline_errors": 1,
+            "forest_errors": 1
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 1092,
+            "baseline_ties": 0,
+            "baseline_errors": 55,
+            "forest_errors": 52
+          },
+          "outside": {
+            "queries": 3596,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4688,
+          "answered": 3436,
+          "wrong": 1
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4688,
+          "answered": 3458,
+          "wrong": 1
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4688,
+          "answered": 3438,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4688,
+          "answered": 3450,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DfE-original-0": {
+          "family_factor": 0.12432369684319777,
+          "context_forest": 0.16372433621111604
+        },
+        "DfE-original-1": {
+          "family_factor": 0.07084646119726119,
+          "context_forest": 0.07231074964229861
+        },
+        "DfE-original-2": {
+          "family_factor": 0.06892272816172003,
+          "context_forest": 0.06369698748109477
+        },
+        "DfE-original-3": {
+          "family_factor": 0.18478742844700535,
+          "context_forest": 0.16120399671166952
+        },
+        "DfE-original-4": {
+          "family_factor": 0.061636707061979226,
+          "context_forest": 0.05949961874198213
+        }
+      }
+    },
+    "DfE:salt-20261104": {
+      "queries": 4818,
+      "resolved": 4817,
+      "transitions": {
+        "both_correct": 4734,
+        "repair": 14,
+        "damage": 8,
+        "both_wrong": 60,
+        "point_tie": 1,
+        "unresolved": 1
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 243,
+            "baseline_ties": 1,
+            "baseline_errors": 65,
+            "forest_errors": 57
+          },
+          "outside": {
+            "queries": 4574,
+            "baseline_ties": 0,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 461,
+            "baseline_ties": 1,
+            "baseline_errors": 70,
+            "forest_errors": 64
+          },
+          "outside": {
+            "queries": 4356,
+            "baseline_ties": 0,
+            "baseline_errors": 4,
+            "forest_errors": 4
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 1076,
+            "baseline_ties": 1,
+            "baseline_errors": 72,
+            "forest_errors": 66
+          },
+          "outside": {
+            "queries": 3741,
+            "baseline_ties": 0,
+            "baseline_errors": 2,
+            "forest_errors": 2
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4817,
+          "answered": 3909,
+          "wrong": 4
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4817,
+          "answered": 3948,
+          "wrong": 3
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4817,
+          "answered": 3908,
+          "wrong": 3
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4817,
+          "answered": 3938,
+          "wrong": 3
+        }
+      ],
+      "q_by_case": {
+        "DfE-salt-20261104-0": {
+          "family_factor": 0.07288224452717736,
+          "context_forest": 0.06814981789815358
+        },
+        "DfE-salt-20261104-1": {
+          "family_factor": 0.06419823970151253,
+          "context_forest": 0.048481939935455194
+        },
+        "DfE-salt-20261104-2": {
+          "family_factor": 0.18672706099899597,
+          "context_forest": 0.1682170519077424
+        },
+        "DfE-salt-20261104-3": {
+          "family_factor": 0.06483826184361832,
+          "context_forest": 0.06653038433546063
+        },
+        "DfE-salt-20261104-4": {
+          "family_factor": 0.12502264947428732,
+          "context_forest": 0.17165943149296492
+        }
+      }
+    },
+    "DfE:salt-20261105": {
+      "queries": 4792,
+      "resolved": 4790,
+      "transitions": {
+        "both_correct": 4705,
+        "repair": 13,
+        "damage": 15,
+        "both_wrong": 56,
+        "point_tie": 1,
+        "unresolved": 2
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 242,
+            "baseline_ties": 1,
+            "baseline_errors": 52,
+            "forest_errors": 53
+          },
+          "outside": {
+            "queries": 4548,
+            "baseline_ties": 0,
+            "baseline_errors": 17,
+            "forest_errors": 18
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 462,
+            "baseline_ties": 1,
+            "baseline_errors": 66,
+            "forest_errors": 68
+          },
+          "outside": {
+            "queries": 4328,
+            "baseline_ties": 0,
+            "baseline_errors": 3,
+            "forest_errors": 3
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 1086,
+            "baseline_ties": 1,
+            "baseline_errors": 69,
+            "forest_errors": 71
+          },
+          "outside": {
+            "queries": 3704,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "family_factor",
+          "threshold": "family_factor",
+          "resolved": 4790,
+          "answered": 3341,
+          "wrong": 1
+        },
+        {
+          "margin": "family_factor",
+          "threshold": "context_forest",
+          "resolved": 4790,
+          "answered": 3472,
+          "wrong": 3
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "family_factor",
+          "resolved": 4790,
+          "answered": 3336,
+          "wrong": 1
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 4790,
+          "answered": 3463,
+          "wrong": 1
+        }
+      ],
+      "q_by_case": {
+        "DfE-salt-20261105-0": {
+          "family_factor": 0.17309965597433255,
+          "context_forest": 0.1374560771446659
+        },
+        "DfE-salt-20261105-1": {
+          "family_factor": 0.10521588503239876,
+          "context_forest": 0.13029079987037118
+        },
+        "DfE-salt-20261105-2": {
+          "family_factor": 0.06885964999099338,
+          "context_forest": 0.0704297269803083
+        },
+        "DfE-salt-20261105-3": {
+          "family_factor": 0.1679090267275401,
+          "context_forest": 0.1562599202293536
+        },
+        "DfE-salt-20261105-4": {
+          "family_factor": 0.06805724811633129,
+          "context_forest": 0.052605254821180204
+        }
+      }
+    },
+    "DfE:current:2020": {
+      "queries": 298,
+      "resolved": 298,
+      "transitions": {
+        "both_correct": 280,
+        "repair": 6,
+        "damage": 2,
+        "both_wrong": 10,
+        "point_tie": 0,
+        "unresolved": 0
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 83,
+            "baseline_ties": 0,
+            "baseline_errors": 15,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 215,
+            "baseline_ties": 0,
+            "baseline_errors": 1,
+            "forest_errors": 1
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 157,
+            "baseline_ties": 0,
+            "baseline_errors": 15,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 141,
+            "baseline_ties": 0,
+            "baseline_errors": 1,
+            "forest_errors": 1
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 258,
+            "baseline_ties": 0,
+            "baseline_errors": 16,
+            "forest_errors": 12
+          },
+          "outside": {
+            "queries": 40,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "lagged_factor",
+          "threshold": "lagged_factor",
+          "resolved": 298,
+          "answered": 155,
+          "wrong": 1
+        },
+        {
+          "margin": "lagged_factor",
+          "threshold": "context_forest",
+          "resolved": 298,
+          "answered": 200,
+          "wrong": 1
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "lagged_factor",
+          "resolved": 298,
+          "answered": 149,
+          "wrong": 1
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 298,
+          "answered": 183,
+          "wrong": 1
+        }
+      ],
+      "q_by_case": {
+        "DfE-current-2020": {
+          "lagged_factor": 0.0756001505688832,
+          "context_forest": 0.05152431552280224
+        }
+      }
+    },
+    "DfE:current:2023": {
+      "queries": 302,
+      "resolved": 302,
+      "transitions": {
+        "both_correct": 281,
+        "repair": 4,
+        "damage": 6,
+        "both_wrong": 10,
+        "point_tie": 1,
+        "unresolved": 0
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 110,
+            "baseline_ties": 1,
+            "baseline_errors": 14,
+            "forest_errors": 16
+          },
+          "outside": {
+            "queries": 192,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 193,
+            "baseline_ties": 1,
+            "baseline_errors": 14,
+            "forest_errors": 16
+          },
+          "outside": {
+            "queries": 109,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 271,
+            "baseline_ties": 1,
+            "baseline_errors": 14,
+            "forest_errors": 16
+          },
+          "outside": {
+            "queries": 31,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "lagged_factor",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 154,
+          "wrong": 0
+        },
+        {
+          "margin": "lagged_factor",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 190,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 149,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 181,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DfE-current-2023": {
+          "lagged_factor": 0.06255518674873509,
+          "context_forest": 0.04560985599868431
+        }
+      }
+    },
+    "DfE:current:2025": {
+      "queries": 302,
+      "resolved": 302,
+      "transitions": {
+        "both_correct": 287,
+        "repair": 3,
+        "damage": 5,
+        "both_wrong": 6,
+        "point_tie": 1,
+        "unresolved": 0
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 104,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 198,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 184,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 118,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 278,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 24,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "lagged_factor",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 183,
+          "wrong": 0
+        },
+        {
+          "margin": "lagged_factor",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 182,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 171,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 168,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DfE-current-2025": {
+          "lagged_factor": 0.05352991613861174,
+          "context_forest": 0.05459295509646154
+        }
+      }
+    },
+    "DfE:preceding:2025": {
+      "queries": 302,
+      "resolved": 302,
+      "transitions": {
+        "both_correct": 287,
+        "repair": 3,
+        "damage": 5,
+        "both_wrong": 6,
+        "point_tie": 1,
+        "unresolved": 0
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 104,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 198,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 184,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 118,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 278,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 24,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "lagged_factor",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 183,
+          "wrong": 0
+        },
+        {
+          "margin": "lagged_factor",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 182,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 171,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 168,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DfE-preceding-release-2025": {
+          "lagged_factor": 0.05352991613861174,
+          "context_forest": 0.05459295509646154
+        }
+      }
+    },
+    "DfE:matched-current:2025": {
+      "queries": 302,
+      "resolved": 302,
+      "transitions": {
+        "both_correct": 287,
+        "repair": 3,
+        "damage": 5,
+        "both_wrong": 6,
+        "point_tie": 1,
+        "unresolved": 0
+      },
+      "event_ratio_screens": {
+        "1.05": {
+          "within": {
+            "queries": 104,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 198,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.1": {
+          "within": {
+            "queries": 184,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 118,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        },
+        "1.25": {
+          "within": {
+            "queries": 278,
+            "baseline_ties": 1,
+            "baseline_errors": 9,
+            "forest_errors": 11
+          },
+          "outside": {
+            "queries": 24,
+            "baseline_ties": 0,
+            "baseline_errors": 0,
+            "forest_errors": 0
+          }
+        }
+      },
+      "crossed_guards": [
+        {
+          "margin": "lagged_factor",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 183,
+          "wrong": 0
+        },
+        {
+          "margin": "lagged_factor",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 182,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "lagged_factor",
+          "resolved": 302,
+          "answered": 171,
+          "wrong": 0
+        },
+        {
+          "margin": "context_forest",
+          "threshold": "context_forest",
+          "resolved": 302,
+          "answered": 168,
+          "wrong": 0
+        }
+      ],
+      "q_by_case": {
+        "DfE-matched-current-2025": {
+          "lagged_factor": 0.05352991613861174,
+          "context_forest": 0.05459295509646154
+        }
+      }
+    }
+  },
+  "checks": {
+    "case_records": 35,
+    "crossed_interval_equivalences": 119808,
+    "existing_point_and_guard_counts_replayed": true,
+    "calibration_scores_replayed": true,
+    "integer_log_identities": true
+  },
+  "crossed_guard_assurance": "Diagnostic only: swapping thresholds does not preserve conformal validity",
+  "uncertainty": "Descriptive counts; prior paired authority-weight intervals and dependent split sensitivity retain their scope"
+}

@@ -3,7 +3,8 @@
 __pycache__/
 *.py[cod]
 .cache/
-# Exact inputs and regenerated numerical records.
+# Downloaded inputs and regenerated working outputs.
+# Published scientific displays and summaries remain tracked under selected/.
 /data/raw/
 /results/
 /records/

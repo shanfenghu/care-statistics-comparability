@@ -1,0 +1,13 @@
+{
+  "cases": 35,
+  "scalar_ridge_fits": 70,
+  "max_absolute_prediction_difference": 7.275957614183426e-12,
+  "scalar_policy_family_checks": 2520,
+  "original_partition_reproduced": true,
+  "matched_vintage_predictions_and_policies_identical": true,
+  "overlapping_2024_2025_authority_year_vectors": 1814,
+  "identical_selected_count_and_region_vectors": 1814,
+  "native_anchor_direction_changes": 0,
+  "summary_sha256": "9681c219323d9bb9ca85f4cacc94a8768f0016670fe3ecb273b3b078b1c944fb",
+  "verifier_sha256": "d9c1f85fb850a416664b42615d6174de0907ad6396142a21a4370036ed7622df"
+}
