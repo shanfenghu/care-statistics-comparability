@@ -19,6 +19,18 @@ COLOR={'literal':'#be4b45','family_factor':'#31688e','isotonic':'#727d86','conte
 MARKER={'literal':'s','family_factor':'o','isotonic':'^','context_ridge':'X','context_forest':'D','lagged_factor':'v'}
 LINE={'literal':':','family_factor':'-','isotonic':'-.','context_ridge':'--','context_forest':'-','lagged_factor':'--'}
 
+def set_risk_axis_limits(ax):
+    """Include every finite policy error; undefined risks remain plot gaps.
+
+    A policy with no answers has an undefined risk. Its NaNs must not shrink
+    the scale of other policies. Keep the existing positive floor for zero or
+    entirely undefined risks; y values are percentages.
+    """
+    finite = [float(y) for line in ax.lines for y in line.get_ydata() if np.isfinite(y)]
+    upper = max(finite, default=0.)
+    ax.set_ylim(0, max(.06, upper*1.15))
+
+
 def main():
     baseline=json.loads((ROOT/'results/comparison-panel/summary.json').read_text())
     robust=json.loads((ROOT/'results/comparison-robustness/summary.json').read_text())
@@ -53,8 +65,8 @@ def main():
                 rr=[get(source+':original',m,kind+'='+str(v)) for v in ([.025,.05,.1] if kind=='alpha' else [.25,.5,.75])]
                 ax.plot([100*r['coverage'] for r in rr],[100*r['risk'] if r['risk'] is not None else np.nan for r in rr],marker=MARKER[m],linestyle=LINE[m],ms=4,lw=1.1,color=COLOR[m],label=LABEL[m],clip_on=False)
             ax.set(title=('Adult' if source=='DHSC' else 'Child')+(' calibrated guard' if kind=='alpha' else ' matched answer budget'),xlim=(0,100),ylabel='Error among answers (%)')
-            upper=max(float(line.get_ydata().max()) for line in ax.lines)
-            ax.set_ylim(0,max(.06,upper*1.15));ax.grid(alpha=.15)
+            set_risk_axis_limits(ax)
+            ax.grid(alpha=.15)
     axs[1,0].set_xlabel('Answered queries (%)');axs[1,1].set_xlabel('Answered queries (%)')
     f.legend(*axs[0,0].get_legend_handles_labels(),ncol=5,frameon=False,loc='upper center',fontsize=8)
     f.subplots_adjust(left=.1,right=.98,bottom=.13,top=.84,wspace=.4,hspace=.55);save(f,'reuse-guards')
