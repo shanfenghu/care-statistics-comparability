@@ -49,7 +49,9 @@ def partition(code,label):
 
 
 def top_budget(point,score,budget):
-    """Select on unlabeled margins only; no native-reference resolution filter."""
+    """Select a fraction in [0,1] by unlabeled margins; preserve stable ties."""
+    if not 0 <= budget <= 1:
+        raise ValueError('Answer budget must be a fraction between zero and one')
     n=math.floor(budget*len(score)); mask=np.zeros(len(score),dtype=bool)
     mask[np.argsort(-score,kind='stable')[:n]]=True
     return np.where(mask,point,0)

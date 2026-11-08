@@ -21,6 +21,15 @@ class ComparisonTests(unittest.TestCase):
         # A selected point tie is still an abstention, never a fabricated sign.
         np.testing.assert_array_equal(top_budget(np.array([0, 1]), np.array([2., 1.]), .5), [0, 0])
 
+    def test_invalid_budget_fractions_are_rejected(self):
+        point = np.array([1, -1, 1, -1])
+        score = np.array([4., 3., 2., 1.])
+        for budget in (-.5, 1.5, math.nan, math.inf):
+            with self.subTest(budget=budget), self.assertRaises(ValueError):
+                top_budget(point, score, budget)
+        np.testing.assert_array_equal(top_budget(point, score, 0), np.zeros(4))
+        np.testing.assert_array_equal(top_budget(point, score, 1), point)
+
     def test_budget_margins_do_not_read_current_native_targets(self):
         a = [self.row(i) for i in range(4)]
         b = deepcopy(a)
@@ -35,6 +44,25 @@ class ComparisonTests(unittest.TestCase):
     def test_rank_and_small_calibration_set(self):
         self.assertEqual(conformal_quantile([1, 2, 3, 4, 5], .2), 5)
         self.assertTrue(math.isinf(conformal_quantile([1, 2, 3, 4, 5], .05)))
+
+    def test_unknown_count_estimator_and_wrong_task_are_rejected(self):
+        train = [self.row(i) for i in range(25)]
+        evaluate = [self.row(27)]
+        cfg = dict(ridge_alpha=1, seed=20261103,
+                   forest=dict(n_estimators=2, min_samples_leaf=3, n_jobs=1))
+        with self.assertRaisesRegex(ValueError, 'Unknown count estimator'):
+            fit_predict('context_forets', train, evaluate, 0, cfg, False)
+        with self.assertRaisesRegex(ValueError, 'temporal task'):
+            fit_predict('lagged_factor', train, evaluate, 0, cfg, False)
+
+    def test_invalid_calibration_levels_and_scores_are_rejected(self):
+        for alpha in (-.1, 0, 1, 2, math.nan, math.inf, True, False):
+            with self.subTest(alpha=alpha), self.assertRaises(ValueError):
+                conformal_quantile([1, 2, 3], alpha)
+        for scores in ([-1, 2], [math.nan], [math.inf], [[1, 2]], 1.):
+            with self.subTest(scores=scores), self.assertRaises(ValueError):
+                conformal_quantile(scores, .05)
+        self.assertTrue(math.isinf(conformal_quantile([], .05)))
 
     def test_group_calibration_covers_both_native_bin_endpoints(self):
         rows = [self.row(i) for i in range(20)]

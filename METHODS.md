@@ -21,6 +21,9 @@ Forests use 100 trees and minimum leaf size five. Isotonic endpoint clipping and
 its small-count failures are retained. Pairwise logistic scores use grouped
 inner validation and provide order, not counts or calibrated intervals.
 Configuration files fix hyperparameters, seeds, folds, grids and budgets.
+Unknown count-estimator names, non-temporal lagged-factor calls and invalid
+calibration levels or nonconformity scores are rejected rather than substituted.
+Answer budgets must be fractions in [0,1]; invalid fractions are rejected.
 
 Five-fold geographic rotations train on three authority folds, calibrate on one
 and test on one; all families move together. Two additional deterministic salts

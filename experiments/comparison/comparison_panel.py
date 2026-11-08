@@ -100,7 +100,16 @@ def features(row, family, temporal=False):
 
 
 def fit_predict(method, train, evaluate, family, config, temporal):
-    """Return a fixed estimator's predictions without using evaluate targets."""
+    """Predict with a named count estimator, without reading evaluation targets.
+
+    Reject unknown methods rather than silently substituting a forest. The
+    lagged factor is defined only for temporal queries with a prior anchor.
+    """
+    if method not in ('literal', 'family_factor', 'lagged_factor', 'isotonic',
+                      'context_ridge', 'context_forest'):
+        raise ValueError('Unknown count estimator: ' + str(method))
+    if method == 'lagged_factor' and not temporal:
+        raise ValueError('The lagged factor requires a temporal task')
     e = np.array([r["e"][family] for r in train], dtype=float)
     p = np.array([r["p"][family] for r in train], dtype=float)
     ee = np.array([r["e"][family] for r in evaluate], dtype=float)
@@ -109,7 +118,6 @@ def fit_predict(method, train, evaluate, family, config, temporal):
     if method == "family_factor":
         return ee * p.sum()/e.sum()
     if method == "lagged_factor":
-        assert temporal
         return np.array([r["e"][family]*r["previous"]["p"][family]/r["previous"]["e"][family] for r in evaluate])
     if method == "isotonic":
         return IsotonicRegression(increasing=True, out_of_bounds="clip").fit(e, p).predict(ee)
@@ -123,9 +131,18 @@ def fit_predict(method, train, evaluate, family, config, temporal):
 
 
 def conformal_quantile(scores, alpha):
-    """Finite-sample rank correction, including legitimately infinite intervals."""
-    rank = math.ceil((len(scores)+1)*(1-alpha))
-    return float(np.sort(scores)[rank-1]) if rank <= len(scores) else math.inf
+    """Return the corrected quantile of finite nonnegative scalar scores.
+
+    Alpha must lie strictly between zero and one. An unavailable rank, including
+    an empty calibration set, gives infinity rather than a misleading finite cap.
+    """
+    values = np.asarray(scores, dtype=float)
+    if not 0 < alpha < 1:
+        raise ValueError('Alpha must lie strictly between zero and one')
+    if values.ndim != 1 or not np.isfinite(values).all() or (values < 0).any():
+        raise ValueError('Scores must be a finite nonnegative one-dimensional sequence')
+    rank = math.ceil((len(values)+1)*(1-alpha))
+    return float(np.sort(values)[rank-1]) if rank <= len(values) else math.inf
 
 
 def conformal_bounds(predictions, rows, alpha):
