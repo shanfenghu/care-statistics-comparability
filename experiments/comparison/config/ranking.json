@@ -1,0 +1,25 @@
+{
+  "seed": 20261105,
+  "regularization": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "tie_break": "larger regularization on exact inner loss ties",
+  "geographic_partitions": [
+    "original",
+    "salt-20261104",
+    "salt-20261105"
+  ],
+  "answer_budget": 0.75,
+  "bootstrap_authority_repetitions": 200,
+  "optimizer": {
+    "maxiter": 2000,
+    "ftol": 1e-12,
+    "gtol": 1e-09,
+    "maxls": 100
+  },
+  "scope": "Prespecified geographic pairwise logistic reference; reused development sources, no test tuning; not a new learning method or fresh source confirmation"
+}

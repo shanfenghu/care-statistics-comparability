@@ -1,0 +1,12 @@
+# Local environments and Python caches.
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+# Exact inputs and regenerated numerical records.
+/data/raw/
+/results/
+/records/
+/figures/
+/tables/
+/cache/

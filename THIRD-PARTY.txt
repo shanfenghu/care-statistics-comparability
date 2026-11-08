@@ -1,0 +1,36 @@
+SOURCE DATA AND ATTRIBUTION
+
+Contains public sector information licensed under the Open Government Licence
+v3.0. Sources: Department of Health and Social Care (DHSC), Adult social care
+activity report, England, 2024 to 2025, STS001 corrected June 2026; Department for
+Education (DfE), Children in need, B1 and C1, reporting years 2025 and 2024.
+Licence: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+The OGL permits copying, adaptation and redistribution with source attribution.
+Its exclusions, third-party rights and non-endorsement condition remain applicable.
+No different file-specific licence was identified for the five selected CSVs.
+The applicable OGL exclusions and source attribution continue to apply.
+No endorsement by either publisher is implied. Original inputs are not bundled.
+
+The five exact CSV versions, retrieval timestamps, byte sizes, download URLs,
+publisher identities and SHA-256 values are in data/comparison-input-manifest.json.
+Current DfE data catalogues identify publication/last update on 30 October 2025;
+older catalogues identify 31 October 2024. Older files were acquired later.
+DHSC publication: https://www.gov.uk/government/statistics/adult-social-care-activity-report-england-2024-to-2025
+DfE publication: https://explore-education-statistics.service.gov.uk/find-statistics/children-in-need/2025
+
+DEPENDENCIES (INSTALLED SEPARATELY; NO DEPENDENCY CODE OR WHEELS BUNDLED)
+
+NumPy, SciPy, scikit-learn, joblib, threadpoolctl, contourpy, cycler and kiwisolver
+use BSD-family licensing; matplotlib uses its matplotlib/PSF-style licence;
+fonttools, six and zipp use MIT; importlib-resources uses Apache-2.0; packaging uses dual Apache/BSD terms; Pillow uses its
+HPND/PIL terms; pyparsing uses MIT; python-dateutil uses dual Apache/BSD terms.
+Consult each installed distribution's actual licence files for authoritative
+terms, bundled components and notices. requirements-comparison.lock records the tested
+versions. This summary is attribution guidance, not a replacement for the terms.
+
+METHOD ATTRIBUTION
+
+Ridge, random forests and increasing isotonic regression use scikit-learn.
+Split conformal rank coverage is established methodology, credited to Lei,
+G'Sell, Rinaldo, Tibshirani and Wasserman. The max-over-family score and query
+guards are documented applications, not a new calibration theorem.

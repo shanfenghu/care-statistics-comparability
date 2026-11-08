@@ -1,0 +1,37 @@
+{
+  "seed": 20261103,
+  "temporal_origins": [
+    2020,
+    2023,
+    2025
+  ],
+  "alpha_values": [
+    0.025,
+    0.05,
+    0.1
+  ],
+  "answer_budgets": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "geographic_partitions": [
+    "original",
+    "salt-20261104",
+    "salt-20261105"
+  ],
+  "models": "unchanged from panel.json",
+  "asof_control": {
+    "fit_calibration_release": 2024,
+    "target_release": 2025,
+    "origin": 2025,
+    "catalogue_published_and_updated": "2024-10-31",
+    "raw_files": [
+      "data/raw/dfe/archive-2024-a33b3b51-0b9c-4774-8dc5-767a018c3ba9.csv",
+      "data/raw/dfe/archive-2024-306c2a56-228b-43f4-8493-894bee427a8c.csv"
+    ]
+  },
+  "budget_score": "abs predicted count difference divided by sum of event counts; temporal absolute predicted change divided by current event count",
+  "budget_selection": "top floor(budget * all unlabelled queries), stable ties, no current native P; point ties abstain",
+  "scope": "Fixed partition, temporal and release-version sensitivity; no outcome-based tuning"
+}

@@ -1,0 +1,20 @@
+{
+  "new_regularization": [
+    1e-05,
+    1e-06,
+    1e-07,
+    1e-08,
+    1e-09,
+    1e-10
+  ],
+  "seed": 20261105,
+  "answer_budget": 0.75,
+  "bootstrap_authority_repetitions": 200,
+  "optimizer": {
+    "maxiter": 5000,
+    "maxls": 200,
+    "ftol": 1e-12,
+    "gtol": 1e-09
+  },
+  "scope": "One bounded training-only lower-grid follow-up; old outcomes known, all new choices frozen before new outer scoring; no outcome-based model selection"
+}

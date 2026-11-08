@@ -1,0 +1,9 @@
+[project]
+name = "countviews"
+version = "0.1.0"
+description = "Exact structural checks and diagnostics for released count tabulations"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

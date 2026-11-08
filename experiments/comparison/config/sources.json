@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "path": "data/raw/dhsc/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "sha256": "bb885cdd3d19c4835653d964af8609e6cb37ab8da84b4bf643f74520efe5eec6",
+      "format": "adult_requests",
+      "pairs": []
+    },
+    {
+      "path": "data/raw/dfe/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32.csv",
+      "sha256": "e32eb63f8e702084c89e2fc9dbdcd626d1f738817a8656fb04a47bf03d9bbfdc",
+      "format": "dfe",
+      "pairs": [
+        [
+          "need any point",
+          "Anypoint_episodes",
+          "Anypoint_child"
+        ]
+      ]
+    },
+    {
+      "path": "data/raw/dfe/911dae20-ac5d-4e28-bee8-53a658761fa5.csv",
+      "sha256": "e634961fa6175393c7962aa3bb334cefb8713f5ecb490f6ce219d6a005973ea8",
+      "format": "dfe",
+      "pairs": [
+        [
+          "referrals",
+          "referral_count",
+          "referral_child_count"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "seed": 20261103,
+  "families": {
+    "DHSC": [
+      "requests age 18 to 64",
+      "requests age 65 and over"
+    ],
+    "DfE": [
+      "need any point",
+      "referrals"
+    ]
+  },
+  "geographic_year": 2025,
+  "folds": 5,
+  "geographic_fit_folds": 3,
+  "geographic_calibration_folds": 1,
+  "alpha": 0.05,
+  "bootstrap_authority_repetitions": 200,
+  "models": [
+    "literal",
+    "family_factor",
+    "isotonic",
+    "context_ridge",
+    "context_forest"
+  ],
+  "temporal_extra_model": "lagged_factor",
+  "forest": {
+    "n_estimators": 100,
+    "min_samples_leaf": 5,
+    "max_features": 1.0,
+    "n_jobs": 1
+  },
+  "ridge_alpha": 1.0,
+  "temporal": {
+    "fit_years": [
+      2014,
+      2023
+    ],
+    "calibration_year": 2024,
+    "test_year": 2025,
+    "source": "DfE",
+    "query": "2025 versus native 2024 people count"
+  },
+  "reference_bins": {
+    "DHSC": 2,
+    "DfE": 0
+  },
+  "scope": "One frozen development round; no outcome-dependent tuning or family selection"
+}

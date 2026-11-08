@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "path": "data/raw/dhsc/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "url": "https://assets.publishing.service.gov.uk/media/6a2a75cac39255c595b506a2/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "final_url": "https://assets.publishing.service.gov.uk/media/6a2a75cac39255c595b506a2/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv",
+      "bytes": 15599608,
+      "sha256": "bb885cdd3d19c4835653d964af8609e6cb37ab8da84b4bf643f74520efe5eec6",
+      "retrieved_at": "2026-11-03T11:03:28.518237+00:00",
+      "publisher": "Department of Health and Social Care",
+      "licence": "Open Government Licence v3.0, subject to publisher third-party exceptions"
+    },
+    {
+      "path": "data/raw/dfe/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32.csv",
+      "url": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32/csv",
+      "final_url": "https://content.explore-education-statistics.service.gov.uk/api/data-set-files/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32/download",
+      "bytes": 336628,
+      "sha256": "e32eb63f8e702084c89e2fc9dbdcd626d1f738817a8656fb04a47bf03d9bbfdc",
+      "retrieved_at": "2026-11-03T11:03:29.920611+00:00",
+      "publisher": "Department for Education",
+      "licence": "Open Government Licence v3.0, subject to publisher third-party exceptions"
+    },
+    {
+      "path": "data/raw/dfe/911dae20-ac5d-4e28-bee8-53a658761fa5.csv",
+      "url": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/911dae20-ac5d-4e28-bee8-53a658761fa5/csv",
+      "final_url": "https://content.explore-education-statistics.service.gov.uk/api/data-set-files/911dae20-ac5d-4e28-bee8-53a658761fa5/download",
+      "bytes": 371366,
+      "sha256": "e634961fa6175393c7962aa3bb334cefb8713f5ecb490f6ce219d6a005973ea8",
+      "retrieved_at": "2026-11-03T11:03:31.273891+00:00",
+      "publisher": "Department for Education",
+      "licence": "Open Government Licence v3.0, subject to publisher third-party exceptions"
+    },
+    {
+      "path": "data/raw/dfe/archive-2024-a33b3b51-0b9c-4774-8dc5-767a018c3ba9.csv",
+      "url": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/a33b3b51-0b9c-4774-8dc5-767a018c3ba9/csv",
+      "final_url": "https://content.explore-education-statistics.service.gov.uk/api/data-set-files/a33b3b51-0b9c-4774-8dc5-767a018c3ba9/download",
+      "bytes": 398655,
+      "sha256": "ce7b26a15004ba9a244138a37d21abc354cf308f06e5f42e5cb7efa449b5f4cf",
+      "retrieved_at": "2026-11-03T11:11:32.692791+00:00",
+      "publisher": "Department for Education",
+      "licence": "Open Government Licence v3.0, subject to publisher third-party exceptions"
+    },
+    {
+      "path": "data/raw/dfe/archive-2024-306c2a56-228b-43f4-8493-894bee427a8c.csv",
+      "url": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/306c2a56-228b-43f4-8493-894bee427a8c/csv",
+      "final_url": "https://content.explore-education-statistics.service.gov.uk/api/data-set-files/306c2a56-228b-43f4-8493-894bee427a8c/download",
+      "bytes": 365262,
+      "sha256": "622f1ebfb9b6377366b5edc7c65e99b2ae3878f15b2f717a527452b026b25b99",
+      "retrieved_at": "2026-11-03T11:11:32.627889+00:00",
+      "publisher": "Department for Education",
+      "licence": "Open Government Licence v3.0, subject to publisher third-party exceptions"
+    }
+  ],
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Sources: Department of Health and Social Care and Department for Education. Crown copyright. No endorsement implied."
+}
