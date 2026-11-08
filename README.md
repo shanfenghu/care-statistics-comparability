@@ -54,7 +54,8 @@ fits the original and expanded ranking grids, freezes inner selections before
 outer scoring, regenerates mechanism and calibration-scope diagnostics, checks
 all selected numerical payloads and produces five figures and six CSV tables.
 It forces one numerical thread and retains warnings in `records/*.log`.
-Existing comparison outputs are refused: use a fresh checkout for another run.
+Existing comparison result directories, plots, tables or nonempty records are
+refused before any stage starts: use a fresh checkout for another run.
 The ranking grids involve 900 original and 1,080 additional inner fits; full
 reproduction took 43 seconds on the tested host and uses a few hundred MB beyond
 the environment. Actual runtime and platform are recorded in `records/reproduction.json`.

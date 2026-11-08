@@ -1,6 +1,6 @@
 # Licence scope
 
-The component licences below apply to version 2.0.0. They do not
+The component licences below apply to version 2.0.1. They do not
 claim publisher endorsement or grant rights in material the contributors do not
 own. These licences govern only this inventory and the described generated outputs.
 

@@ -14,11 +14,34 @@ ROOT = Path(__file__).resolve().parents[2]
 EXPERIMENT = ROOT / 'experiments/comparison'
 
 
+def require_fresh_outputs(root):
+    """Refuse partial runs as well as complete runs before creating any outputs.
+
+    A missing first-stage directory does not imply that later evidence is absent.
+    Unrelated result directories may coexist with this evaluation.
+    """
+    owned = [root / 'results' / name for name in (
+        'comparison-panel', 'comparison-robustness', 'comparison-ranking-stable',
+        'comparison-ranking-boundary', 'comparison-mechanism', 'calibration-scope')]
+    owned += [root / 'tables' / name for name in (
+        'geographic.csv', 'temporal.csv', 'vintage.csv', 'mechanisms.csv',
+        'calibration-scope.csv', 'cohorts.csv', 'metrics.json')]
+    for name in ('results', 'records', 'figures', 'tables'):
+        parent = root / name
+        if parent.is_symlink() or (parent.exists() and not parent.is_dir()):
+            raise FileExistsError('Output parent must be an ordinary directory: ' + str(parent))
+    owned += list((root / 'figures').glob('reuse-*.pdf'))
+    owned += list((root / 'figures').glob('reuse-*.png'))
+    records = root / 'records'
+    if (records.exists() and any(records.iterdir())) or any(
+            path.exists() or path.is_symlink() for path in owned):
+        raise FileExistsError('Use a fresh checkout; existing comparison outputs are preserved')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.parse_args()
-    if (ROOT / 'results/comparison-panel').exists():
-        raise FileExistsError('Use a fresh checkout; existing comparison outputs are preserved')
+    require_fresh_outputs(ROOT)
     for name in ['results', 'records', 'figures', 'tables']:
         (ROOT / name).mkdir(exist_ok=True)
     env = os.environ.copy()

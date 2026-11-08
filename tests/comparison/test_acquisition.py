@@ -2,10 +2,12 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from acquire import check, safe
 from check_results import compare
 from export_tables import count
+import reproduce
 
 
 class InputBoundaryTests(unittest.TestCase):
@@ -38,6 +40,47 @@ class InputBoundaryTests(unittest.TestCase):
         self.assertEqual(count(81.0),81)
         for bad in [True, -1, 1.5, float('inf'), float('nan')]:
             with self.assertRaises(ValueError):count(bad)
+
+    def test_partial_outputs_are_preserved_before_any_stage(self):
+        names = ['results/' + name + '/summary.json' for name in (
+            'comparison-panel', 'comparison-robustness', 'comparison-ranking-stable',
+            'comparison-ranking-boundary', 'comparison-mechanism', 'calibration-scope')]
+        names += ['records/steps.json', 'figures/reuse-example.pdf',
+                  'figures/reuse-fit.png', 'tables/geographic.csv', 'tables/metrics.json']
+        for name in names:
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as folder:
+                root = Path(folder)
+                path = root / name
+                path.parent.mkdir(parents=True)
+                path.write_bytes(b'earlier evidence')
+                before = sorted(str(p.relative_to(root)) for p in root.rglob('*'))
+                with patch.object(reproduce, 'ROOT', root), patch('sys.argv', ['reproduce']), \
+                        patch.object(reproduce.subprocess, 'run') as child:
+                    with self.assertRaises(FileExistsError):
+                        reproduce.main()
+                    child.assert_not_called()
+                self.assertEqual(path.read_bytes(), b'earlier evidence')
+                self.assertEqual(sorted(str(p.relative_to(root)) for p in root.rglob('*')), before)
+
+    def test_output_symlinks_are_refused(self):
+        for name in ('results', 'records', 'figures', 'tables',
+                     'results/comparison-robustness', 'figures/reuse-fit.pdf',
+                     'tables/metrics.json'):
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as folder:
+                root = Path(folder)
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.symlink_to(root / 'missing')
+                with self.assertRaises(FileExistsError):
+                    reproduce.require_fresh_outputs(root)
+
+    def test_unrelated_outputs_and_empty_parents_are_allowed(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name in ('results/other-evaluation', 'records', 'figures', 'tables'):
+                (root / name).mkdir(parents=True)
+            (root / 'figures/other.pdf').write_bytes(b'earlier evidence')
+            reproduce.require_fresh_outputs(root)
 
 
 if __name__ == '__main__':
