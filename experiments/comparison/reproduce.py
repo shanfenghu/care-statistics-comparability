@@ -45,7 +45,7 @@ def main():
     for name in ['results', 'records', 'figures', 'tables']:
         (ROOT / name).mkdir(exist_ok=True)
     env = os.environ.copy()
-    # Keep any externally installed isolation hook, while making imports explicit.
+    # Preserve configured import paths for every analysis subprocess.
     env['PYTHONPATH'] = os.pathsep.join(filter(None, [str(ROOT/'src'), str(EXPERIMENT), env.get('PYTHONPATH')]))
     env.update(OMP_NUM_THREADS='1', OPENBLAS_NUM_THREADS='1', MKL_NUM_THREADS='1',
                PYTHONDONTWRITEBYTECODE='1', MPLCONFIGDIR=str(ROOT/'cache/matplotlib'),

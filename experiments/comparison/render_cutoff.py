@@ -2,7 +2,6 @@
 from pathlib import Path
 import hashlib
 import json
-import shutil
 
 import matplotlib
 matplotlib.use('Agg')
@@ -55,8 +54,8 @@ def render_introduction():
             ax.text(x,y,label,ha='center',va='bottom',fontsize=10,weight='bold')
         ax.text(1,136,'149',ha='center',va='top',fontsize=8,color='#555d63')
         ax.set(xlim=(-.55,3.55),ylim=(0,218),yticks=[0,50,100,150,200],
-               xticks=[0,1,2,3],xticklabels=['Lagged\nown policy','Change only\npredictions',
-                                            'Lower only\nthe cutoff','Forest\nown policy'])
+               xticks=[0,1,2,3],xticklabels=['Lagged\nown policy','Swap only\npredictions',
+                                            'Use forest\ncutoff','Forest\nown policy'])
         ax.set_ylabel('Answered queries',fontsize=8)
         ax.tick_params(axis='both',labelsize=7.8,length=2,pad=3)
         ax.spines[['top','right']].set_visible(False)

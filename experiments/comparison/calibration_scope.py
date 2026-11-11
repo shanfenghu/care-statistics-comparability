@@ -73,7 +73,7 @@ def evaluate(case):
                     assert (old is None and np.isinf(qs).all()) or np.all(qs == old)
                 lo = np.maximum(0, tp - events * qs)
                 hi = tp + events * qs
-                cover = (lo <= target - test_rad) & (hi >= target + test_rad)
+                cover = (lo <= np.maximum(0, target - test_rad)) & (hi >= target + test_rad)
                 for query in qq:
                     f, a, b = query['f'], query['a'], query['b']
                     answer = (order(lo[:, f], hi[:, f], query['anchor'], query['anchor'])

@@ -6,6 +6,14 @@ yield and assurance scope together. Adult requests and child episodes/referrals
 come from two separately collected English administrative systems sharing local
 authorities. These are workload counts, not care need, quality or individual records.
 
+The information restriction tests a hypothetical reuse choice: when a service has
+event totals but people counts only for other areas or earlier years, should it
+decline a comparison, apply a simple conversion or fit a contextual model?
+Withholding published people counts makes that counterfactual evaluable; it does
+not document deployed missing-data reuse. The protocol compares those choices on
+equally weighted retained within-fold area pairs and specified annual changes,
+not an observed distribution of analysts' requests or operational utility.
+
 ## Setup and tests
 
 Tested on CPython 3.9.6, macOS arm64, with the 17 runtime versions in
@@ -43,6 +51,46 @@ PYTHONPATH=src:experiments/comparison .venv/bin/python experiments/comparison/re
 
 The selected snapshot stays intact. Full fitting below writes separate root working
 outputs, so a fresh checkout can still run the complete analysis.
+
+## One result from numbers to figure
+
+The 2023 child example separates changing predictions from changing the cutoff.
+From the repository root, inspect the included numerical record:
+
+```sh
+.venv/bin/python - <<'PYCODE'
+import json
+from pathlib import Path
+
+path = Path("selected/results/comparison-mechanism/summary.json")
+group = json.loads(path.read_text())["groups"]["DfE:current:2023"]
+cells = {(row["margin"], row["threshold"]): row
+         for row in group["crossed_guards"]}
+path_keys = [("lagged_factor", "lagged_factor"),
+             ("context_forest", "lagged_factor"),
+             ("context_forest", "context_forest")]
+print({"resolved": group["resolved"],
+       "answers": [cells[key]["answered"] for key in path_keys],
+       "errors": [cells[key]["wrong"] for key in path_keys],
+       "cutoffs": group["q_by_case"]["DfE-current-2023"]})
+PYCODE
+```
+
+This prints 302 resolved queries, answers `[154, 149, 181]` and errors
+`[0, 0, 0]`. Each key pairs the model supplying the predicted margin with the
+model supplying the cutoff. The cutoffs are about 0.06256 for the lagged factor
+and 0.04561 for the forest. METHODS.md defines the score and quantile rule.
+The fourth cell, lagged margins with the forest cutoff, gives 190 answers.
+Mixed cells are diagnostic controls without a coverage guarantee.
+
+The matching display is `selected/figures/reuse-example.pdf` (and `.png`).
+Run the display-only command above to regenerate it under the new directory's
+`figures/`, with the numbers in `tables/mechanisms.csv`. To recompute the
+analysis from provider inputs, run the full reproduction below, then change the
+recipe's path to `results/comparison-mechanism/summary.json`. Compare the new
+values with the selected record; the reference snapshot is not independent
+confirmation. The full run writes the corresponding `figures/reuse-example.pdf`
+and `tables/mechanisms.csv` at the repository root.
 
 ## Provider inputs
 
@@ -87,7 +135,7 @@ confirmation. Dense predictions, raw inputs, environments and caches stay out of
 Git. The selected scientific displays and summaries remain tracked under
 `selected/`; dense working outputs are regenerated locally. No external service is used after acquisition.
 
-Better count fit need not improve comparisons. Repairs can create new errors;
+Better count fit need not improve comparisons. Models can correct some orders and introduce new errors;
 temporal preferences change by year. Specified-family calibration gives up joint
 protection. Exchangeability and future transport are unestablished; zero observed
 errors do not bound future risk. See `METHODS.md` for assumptions and limitations.

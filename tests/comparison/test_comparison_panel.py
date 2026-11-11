@@ -2,11 +2,13 @@
 from copy import deepcopy
 import math
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 
-from comparison_panel import conformal_bounds, conformal_quantile, features, fit_predict, order
-from comparison_robustness import queries, top_budget
+from comparison_panel import case_results, conformal_bounds, conformal_quantile, features, fit_predict, order
+from comparison_robustness import queries, run_case, top_budget
+from calibration_scope import evaluate
 
 
 class ComparisonTests(unittest.TestCase):
@@ -92,6 +94,46 @@ class ComparisonTests(unittest.TestCase):
         self.assertGreater(q*10, exact_radius)
         self.assertLessEqual(max(0., 10.-q*10), native_low)
         self.assertGreaterEqual(10.+q*10, native_high)
+
+    def zero_truncated_case(self):
+        """Use fixed predictions whose finite intervals are exactly [0, 3]."""
+        rows = [dict(source='boundary', code=str(i), year=2025, region='a',
+                     e=[10, 10], p=[1, 1], radius=2) for i in range(44)]
+        return dict(name='boundary', source='boundary', task='geographic',
+                    group='boundary', train=rows[:2], cal=rows[2:42], test=rows[42:])
+
+    def zero_truncated_replay(self):
+        case = self.zero_truncated_case()
+        with patch('comparison_robustness.fit_predict',
+                   side_effect=lambda method, train, rows, family, cfg, temporal:
+                   np.ones(len(rows))):
+            return run_case(case, dict(models=['literal']),
+                            dict(alpha_values=[.025, .05, .1], answer_budgets=[]))
+
+    def test_panel_coverage_uses_zero_truncated_native_bin(self):
+        rows = self.zero_truncated_case()['test']
+        pred = np.ones((2, 2))
+        covered, _ = case_results('boundary', 'literal', rows, pred, .2, False)
+        self.assertTrue(all(r['covered'] and r['group_covered'] for r in covered))
+        # Clipping the lower endpoint must not conceal a missed upper endpoint.
+        missed, _ = case_results('boundary', 'literal', rows, pred, .1, False)
+        self.assertTrue(all(not r['covered'] for r in missed))
+
+    def test_robustness_coverage_uses_zero_truncated_native_bin(self):
+        result = self.zero_truncated_replay()
+        for metric in result['methods']['literal']['metrics']:
+            if metric['policy'].startswith('alpha='):
+                with self.subTest(policy=metric['policy'], family=metric['family']):
+                    self.assertEqual(metric['covered_rows'], 2)
+                    self.assertEqual(metric['covered_vectors'], 2)
+
+    def test_scope_coverage_uses_zero_truncated_native_bin(self):
+        records, _ = evaluate(self.zero_truncated_replay())
+        for record in records:
+            with self.subTest(alpha=record['alpha'], scope=record['scope'],
+                              family=record['family']):
+                self.assertEqual(record['covered_rows'], 2)
+                self.assertEqual(record['covered_vectors'], 2)
 
     def test_structural_count_bound_can_certify_temporal_decline(self):
         self.assertEqual(int(order(0, 5, 10, 10)), -1)

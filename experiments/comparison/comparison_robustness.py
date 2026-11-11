@@ -126,7 +126,7 @@ def run_case(case,base,cfg):
         for alpha in cfg['alpha_values']:
             quantile=conformal_quantile(scores,alpha);quantiles[str(alpha)]=quantile if math.isfinite(quantile) else None
             low=np.maximum(0,tp-quantile*ee);high=tp+quantile*ee
-            cover=(low<=tt-rr)&(high>=tt+rr)
+            cover=(low<=np.maximum(0,tt-rr))&(high>=tt+rr)
             for q in qq:
                 f=q['f'];a=q['a'];b=q['b']
                 answer=order(low[:,f],high[:,f],q['anchor'],q['anchor']) if temporal else order(low[a,f],high[a,f],low[b,f],high[b,f])

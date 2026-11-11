@@ -165,7 +165,7 @@ def case_results(case, method, test, prediction, q, temporal):
     p = np.array([r["p"] for r in test], dtype=float)
     radius = np.array([r["radius"] for r in test])[:, None]
     lower, upper = np.maximum(0, prediction-q*e), prediction+q*e
-    covered = (lower <= p-radius) & (upper >= p+radius)
+    covered = (lower <= np.maximum(0, p-radius)) & (upper >= p+radius)
     rows = []
     for i, r in enumerate(test):
         for f in range(2):

@@ -22,6 +22,12 @@ The five studied downloads are:
   2026: [CSV](https://assets.publishing.service.gov.uk/media/6a2a75cac39255c595b506a2/requests-sts001-asc-activity-2024-to-2025-updated-june-2026.csv).
   Select ages 18–64 and 65+, pairing `Age band total` events with `Client Count`
   people. The age bands are strata of one source; people sets need not be disjoint.
+  The target concerns people associated with eligible requests, not all adult-care
+  recipients. The [documented STS001 new-client rule](https://www.gov.uk/government/statistics/adult-social-care-activity-report-england-2024-to-2025/adult-social-care-activity-report-2024-to-2025-methodology#requests-for-support-sts001)
+  requires no long-term support in the preceding three months, excluding requests
+  after an active long-term support event within the 91 days before their start.
+  This target definition does not resolve which clustering processor produced the
+  retained corrected CSV.
 - DfE B1 episodes/children, 2025 release, history 2013–2025:
   [CSV](https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/37cb9a2a-7e3f-409e-8dc4-1fd399ee7d32/csv).
   Pair `Anypoint_episodes` with `Anypoint_child`.
@@ -79,9 +85,10 @@ local-authority rows with both families present and positive. Missing, suppresse
 unreliable and inapplicable values remain unavailable, never zero; national or
 regional values do not fill local omissions. The studied current cohorts contain
 152 adult and 153 child authorities. Adult nearest-five counts use radius two;
-child local counts use radius zero. The temporal analysis fits 2014–2023,
+child local counts use radius zero. The 2025 temporal case fits 2014–2023,
 calibrates on 2024 and tests 2025; fixed geographic partitions and seeds are in
-`experiments/comparison/config/panel.json`. Other panels declare their own
+`experiments/comparison/config/panel.json`. The 2020 and 2023 tests use the
+same train-through-test-minus-two and prior-year calibration rule. Other panels declare their own
 selections in the adjacent configuration files. These steps run in the analysis:
 
 ```sh
