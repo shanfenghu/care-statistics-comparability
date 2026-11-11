@@ -34,3 +34,12 @@ Ridge, random forests and increasing isotonic regression use scikit-learn.
 Split conformal rank coverage is established methodology, credited to Lei,
 G'Sell, Rinaldo, Tibshirani and Wasserman. The max-over-family score and query
 guards are documented applications, not a new calibration theorem.
+
+EMBEDDED FIGURE FONTS
+
+The selected figure PDFs contain DejaVu Sans and DejaVu Sans Bold font subsets
+embedded by Matplotlib. Their copyright and permission notices are reproduced
+unchanged in LICENSES/DejaVu-fonts.txt from the installed Matplotlib font bundle.
+DejaVu changes are public domain; the underlying Bitstream Vera and imported
+Arev glyphs retain the included notices. No standalone font files are distributed.
+Upstream licence: https://dejavu-fonts.github.io/License.html

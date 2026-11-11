@@ -142,4 +142,6 @@ errors do not bound future risk. See `METHODS.md` for assumptions and limitation
 
 Original code/docs use MIT; original result payloads and generated displays use
 CC BY 4.0. Covered government information retains OGL v3.0 terms and attribution.
-See `LICENSING.md`, `LICENSES/` and `THIRD-PARTY.txt`. No dependency binaries are bundled.
+See `LICENSING.md`, `LICENSES/` and `THIRD-PARTY.txt`. Dependencies are installed
+separately; notices for font subsets embedded in the PDFs are in
+`LICENSES/DejaVu-fonts.txt`.

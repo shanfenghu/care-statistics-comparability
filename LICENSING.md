@@ -15,8 +15,11 @@ own. These licences govern only this inventory and the described generated outpu
 - Government input CSVs downloaded from the original providers, and covered publisher information
   in data/comparison-input-manifest.json: OGL v3.0, not MIT. See LICENSES/OGL-UK-3.0.txt and
   THIRD-PARTY.txt. Provider CSVs and prepared input copies are not distributed in this repository or its release assets.
+- Embedded DejaVu font subsets in the figure PDFs retain their font licences.
+  See LICENSES/DejaVu-fonts.txt for the complete copyright and permission notices.
+  The original display licence does not replace those font terms.
 - Licence texts and separately installed dependencies retain their own terms.
-  No dependency source, binary or environment is bundled here.
+  Apart from the PDF font subsets, no dependency source, binary or environment is bundled here.
 
 Required input attribution: Contains public sector information licensed under
 the Open Government Licence v3.0. Sources: Department of Health and Social Care,
